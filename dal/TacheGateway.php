@@ -8,12 +8,14 @@
  */
     //require("connection.php");
     //require("Tache.php");
+
 class TacheGateway
 {
     private $con;
     public function __construct(Connection $con)
     {
-       $this->con=$con;
+        $dsn = "mysql:host=hina;dbname=dbargiraud";
+        $this->con= new Connection($dsn,'argiraud', 'argiraud');
     }
     public function insererTache(Tache $laTache){
         $this->con->executeQuery('INSERT INTO Tache VALUES (:id,:nom,:date_debut,:date_fin,:description)',
@@ -22,7 +24,6 @@ class TacheGateway
             ':date_debut'=>array($laTache->getDateDebut(),PDO::PARAM_STR),
             ':date_fin'=>array($laTache->getDateFin(),PDO::PARAM_STR),
             'description'=>array($laTache->getDescriptionTache(),PDO::PARAM_STR)));
-
     }
 
     public function modifierTache(Tache $laTache){
@@ -35,9 +36,9 @@ class TacheGateway
                 'description'=>array($laTache->getDescriptionTache(),PDO::PARAM_STR)));
     }
 
-    public function supprimerTache (Tache $laTache){
+    public function supprimerTache (string $nom){
         $this->con->executeQuery('DELETE FROM Tache WHERE nom = :nom',
-            array(':nom'=>array($laTache->getNomTache(),PDO::PARAM_STR)));
+            array(':nom'=>array($nom,PDO::PARAM_STR)));
     }
 
     private function creerTache (array $results){
@@ -46,7 +47,7 @@ class TacheGateway
             $retour[]=new Tache($row['id'],$row['nom_tache'],$row['date_debut'],$row['date_fin'],$row['description_tache']);
         }
     }
-    public function rechercheLigne (str $nom)
+    public function rechercheLigne (string $nom)
     {
         $query='SELECT * FROM Tache WHERE nomTache=:nom';
         $this->con->executeQuery($query,array(':nom'=>array($nom,PDO::PARAM_STR)));
@@ -58,10 +59,8 @@ class TacheGateway
     {
         $query = 'SELECT * FROM Tache';
         $this->con->executeQuery($query, array());
-        $results=$this->con->getResults();
-        foreach ($results as $row) {
-            echo $row['id'],$row['nom_tache'],$row['date_debut'],$row['date_fin'],$row['description_tache'];
-        }
+        return $this->con->getResults();
+        
     }
 
 }

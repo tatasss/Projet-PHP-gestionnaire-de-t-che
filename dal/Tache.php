@@ -38,7 +38,7 @@ class Tache
     }
 
     function toString(){
-        echo $this->nom_tache ."    : nom de la tache"."<br/>";
+        echo $this->nom_tache ." : nom de la tache"."<br/>";
     }
 
     /**
