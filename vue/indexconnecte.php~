@@ -18,34 +18,21 @@
  </div>
  <ul class="nav navbar-nav">
 <li class="active"><a href="indexconnecte.php">Accueil</a></li>
-<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="indexconnecte.php">Tache Publique<span class="caret"></span></a>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="../index.php">Tache Publique<span class="caret"></span></a>
   <ul class="dropdown-menu">
- <li><a href="AjouetrTachePu.php">Ajouter tache publique</a></li>
- <li><a href="SupprimerTachePu.php">Supprimer tache publique</a></li>
+ <li><a href="vue/AjouetrTachePu.php">Ajouter tache publique</a></li>
+ <li><a href="vue/SupprimerTachePu.php">Supprimer tache publique</a></li>
  
   </ul>
 </li>
 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Liste de Taches Publiques<span class="caret"></span></a>
 <ul class="dropdown-menu">
- <li><a href="AjouterListeTachePu.php">Creer une liste de taches publiques</a></li>
- <li><a href="SupprimerListeTachePu.php">Supprimer une liste de taches publiques</a></li>
+ <li><a href="vue/AjouterListeTachePu.php">Creer une liste de taches publiques</a></li>
+ <li><a href="vue/SupprimerListeTachePu.php">Supprimer une liste de taches publiques</a></li>
  
   </ul>
 </li>
-<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="../indexconnecte.php">Tache Privée<span class="caret"></span></a>
-  <ul class="dropdown-menu">
- <li><a href="AjouetrTachePr.php">Ajouter tache privée</a></li>
- <li><a href="SupprimerTachePr.php">Supprimer tache privée</a></li>
- 
-  </ul>
-</li>
-<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Liste de Taches Privée<span class="caret"></span></a>
-<ul class="dropdown-menu">
- <li><a href="AjouterListeTachePr.php">Creer une liste de taches privées</a></li>
- <li><a href="SupprimerListeTachePr.php">Supprimer une liste de taches privées</a></li>
- 
-  </ul>
-</li>
+
 <!--<li><a href="#">Page 3</a></li>-->
  </ul>
 <ul class="nav navbar-nav navbar-right">

@@ -19,15 +19,15 @@
 <li ><a href="../index.php">Accueil</a></li>
 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="../index.php">Tache Publique<span class="caret"></span></a>
   <ul class="dropdown-menu">
- <li><a href="AjouetrTachePu.php">Ajouter tache publique</a></li>
- <li><a href="SupprimerTachePu.php">Supprimer tache publique</a></li>
+ <li><a href="vue/AjouetrTachePu.php">Ajouter tache publique</a></li>
+ <li><a href="vue/SupprimerTachePu.php">Supprimer tache publique</a></li>
  
   </ul>
 </li>
 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Liste de Taches Publiques<span class="caret"></span></a>
 <ul class="dropdown-menu">
- <li><a href="AjouterListeTachePu.php">Creer une liste de taches publiques</a></li>
- <li><a href="SupprimerListeTachePu.php">Supprimer une liste de taches publiques</a></li>
+ <li><a href="vue/AjouterListeTachePu.php">Creer une liste de taches publiques</a></li>
+ <li><a href="vue/SupprimerListeTachePu.php">Supprimer une liste de taches publiques</a></li>
  
   </ul>
 </li>
