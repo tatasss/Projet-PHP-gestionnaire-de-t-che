@@ -8,8 +8,12 @@
 
 class Utilisateur
 {
-    public function __construct()
-    {
+    private $nom;
+    private $isAdmin;
 
+    public function __construct($nom,$isAdmin)
+    {
+        $this->nom=$nom;
+        $this->isAdmin=$isAdmin;
     }
 }

@@ -27,14 +27,16 @@ class Tache
     private $date_debut;
     private $date_fin;
     private $description_tache;
+    private $id_liste;
 
-    function __construct($id,$nom_tache,$date_debut,$date_fin, $description_tache)
+    function __construct($id,$nom_tache,$date_debut,$date_fin, $description_tache, $id_liste)
     {
         $this->id=$id;
         $this->nom_tache=$nom_tache;
         $this->date_debut=$date_debut;
         $this->date_fin=$date_fin;
         $this->description_tache=$description_tache;
+        $this->id_liste=$id_liste;
     }
 
     function toString(){
@@ -79,5 +81,10 @@ class Tache
     public function getId()
     {
         return $this->id;
+    }
+
+    public function getListeId()
+    {
+        return $this->id_liste;
     }
 }

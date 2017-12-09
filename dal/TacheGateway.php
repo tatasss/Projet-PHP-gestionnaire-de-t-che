@@ -14,9 +14,24 @@ class TacheGateway
     private $con;
     public function __construct(Connection $con)
     {
-        $dsn = "mysql:host=hina;dbname=dbargiraud";
-        $this->con= new Connection($dsn,'argiraud', 'argiraud');
+       $this->con=$con;
     }
+
+    public function getTachesDeListe($id){
+        $query='SELECT * FROM TACHE WHERE id_liste=:id';
+        $this->con->executeQuery($query, array(':id' => array($id, PDO::PARAM_INIT)));
+        $results=$this->con->getResults();
+        return $this->getInstances($results);
+    }
+
+    private function getInstances(array $results){
+        $retour=[];
+        foreach ($results as $row) {
+            $retour[] = new ListeTaches($row['id'], $row['nom']);
+        }
+        return $retour;
+    }
+
     public function insererTache(Tache $laTache){
         $this->con->executeQuery('INSERT INTO Tache VALUES (:id,:nom,:date_debut,:date_fin,:description)',
       array(':id'=>array($laTache->getId(),PDO::PARAM_INT),
@@ -36,7 +51,7 @@ class TacheGateway
                 'description'=>array($laTache->getDescriptionTache(),PDO::PARAM_STR)));
     }
 
-    public function supprimerTache (string $nom){
+    public function supprimerTache ($nom){
         $this->con->executeQuery('DELETE FROM Tache WHERE nom = :nom',
             array(':nom'=>array($nom,PDO::PARAM_STR)));
     }
@@ -47,7 +62,7 @@ class TacheGateway
             $retour[]=new Tache($row['id'],$row['nom_tache'],$row['date_debut'],$row['date_fin'],$row['description_tache']);
         }
     }
-    public function rechercheLigne (string $nom)
+    public function rechercheLigne ($nom)
     {
         $query='SELECT * FROM Tache WHERE nomTache=:nom';
         $this->con->executeQuery($query,array(':nom'=>array($nom,PDO::PARAM_STR)));
