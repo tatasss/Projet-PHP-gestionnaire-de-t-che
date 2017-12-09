@@ -5,10 +5,10 @@
  * Date: 08/12/2017
  * Time: 16:50
  */
-
+namespace dal;
 class ListeTachesGateway
 {
-
+    private $con;
     public function __construct(Connection $con)
     {
         $this->con=$con;
@@ -17,6 +17,13 @@ class ListeTachesGateway
     public function findByName($nom){
         $query='SELECT * FROM LISTETACHES WHERE nom=:nom';
         $this->con->executeQuery($query, array(':nom' => array($nom, PDO::PARAM_INIT)));
+        $results=$this->con->getResults();
+        return $this->getInstances($results);
+    }
+
+    public function findByProprio($proprietaire){
+        $query='SELECT * FROM LISTETACHES WHERE proprietaire=:proprietaire';
+        $this->con->executeQuery($query, array(':proprietaire' => array($proprietaire, PDO::PARAM_INIT)));
         $results=$this->con->getResults();
         return $this->getInstances($results);
     }
@@ -41,6 +48,8 @@ class ListeTachesGateway
     }
 
     public function tachesDeListe (ListeTaches $liste){
-
+        $modele_tache=new ModeleTache($this->con);
+        $tab=$modele_tache->tachesDeListe($liste);
+        return $tab;
     }
 }

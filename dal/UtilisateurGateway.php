@@ -1,4 +1,5 @@
 <?php
+namespace dal;
 /**
  * Created by PhpStorm.
  * User: argiraud
@@ -13,7 +14,7 @@ class UtilisateurGateway
         $this->con=$con;
     }
 
-    public function findByName($nom, $mdp){
+    public function findUser($nom, $mdp){
         $query='SELECT * FROM UTILISATEUR WHERE nom=:nom AND mdp=:mdp';
         $this->con->executeQuery($query, array(':nom' => array($nom, PDO::PARAM_INIT),
         ':mdp' => array($mdp, PDO::PARAM_INIT)));

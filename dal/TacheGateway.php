@@ -1,5 +1,5 @@
 <?php
-
+namespace dal;
 /**
  * Created by PhpStorm.
  * User: argiraud

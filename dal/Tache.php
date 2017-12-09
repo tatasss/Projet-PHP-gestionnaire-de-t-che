@@ -1,5 +1,5 @@
 <?php
-
+namespace dal;
 /**
  * Created by PhpStorm.
  * User: argiraud
@@ -28,8 +28,9 @@ class Tache
     private $date_fin;
     private $description_tache;
     private $id_liste;
+    private $proprietaire;
 
-    function __construct($id,$nom_tache,$date_debut,$date_fin, $description_tache, $id_liste)
+    function __construct($id,$nom_tache,$date_debut,$date_fin, $description_tache, $id_liste, $proprietaire)
     {
         $this->id=$id;
         $this->nom_tache=$nom_tache;
@@ -37,6 +38,7 @@ class Tache
         $this->date_fin=$date_fin;
         $this->description_tache=$description_tache;
         $this->id_liste=$id_liste;
+        $this->proprietaire=$proprietaire;
     }
 
     function toString(){
@@ -86,5 +88,10 @@ class Tache
     public function getListeId()
     {
         return $this->id_liste;
+    }
+
+    public function getProprietaire()
+    {
+        return $this->proprietaire;
     }
 }
