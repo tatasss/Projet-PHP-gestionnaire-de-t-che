@@ -8,14 +8,15 @@
 //require ("validation.php");
 class FrontController
 {
-
+	
     public function __construct()
     {
         
     }
 	function Connection($login,$mdp) {
-			$login=Validation->ValiderString($login);
-			$mdp=Validation->ValiderString($mdp);
-			
+		isset($con) ? $conn = $con : $conn = nullisset;
+			$login=Validation::validerString($login);
+			$mdp=Validation::validerString($mdp);
+			$con=new Connection("config/config.php");
 	}
 }

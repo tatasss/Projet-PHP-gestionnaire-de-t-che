@@ -8,7 +8,7 @@ $login="";
 $mdp="";
 //liste des vue
 $vue['erreur']='vue/erreur.php';
-$vue['index']='vue/indexVue.php';
+$vue['index']='vue/indexVue.php'
 $vue['public']='vue/public.php';
 $vue['prive']='vue/privee.php';
 ?>
