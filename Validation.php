@@ -8,15 +8,14 @@
 
 class Validation
 {
-    public static function validerString($string){
-        filter_var($string,FILTER_SANITIZE_STRING);
-        return $string;
+    public static function nettoyerString($string):string {
+        return filter_var($string,FILTER_SANITIZE_STRING);
+
     }
 
-    public static function validerInt($int){
-        filter_var($int,FILTER_SANITIZE_NUMBER_INT);
-        filter_var($int,FILTER_VALIDATE_INT);
-        return $int;
+    public static function nettoyerInt($int){
+        return filter_var($int,FILTER_SANITIZE_NUMBER_INT);
+
     }
 
 
