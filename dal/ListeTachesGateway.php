@@ -31,7 +31,7 @@ class ListeTachesGateway
     private function getInstances(array $results){
         $retour=[];
         foreach ($results as $row) {
-            $retour[] = new ListeTaches($row['id'], $row['nom']);
+            $retour[] = new ListeTaches($row['id'], $row['nom'],$row['is_public'],$row['proprietaire'],$row['description']);
         }
         return $retour;
     }
