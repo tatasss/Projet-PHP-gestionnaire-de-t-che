@@ -61,7 +61,10 @@ class FrontController
     }
 
 	function reinit($vue){
-
+        $dVue = array (
+            'nom' => "",
+            'age' => 0,
+        );
         require ($vue['index']);
     }
     function  chercherFormulaireCo($vue){

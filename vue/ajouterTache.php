@@ -38,26 +38,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <!--<li><a href="vue/inscription.php"><span class="glyphicon glyphicon-user"></span> S'inscrire</a></li>-->
-            <li class="active"><a href="index.php?action=connection" ><span class="glyphicon glyphicon-log-in"></span> Se connecter</a></li>
+            <li ><a href="index.php?action=connection" ><span class="glyphicon glyphicon-log-in"></span> Se connecter</a></li>
         </ul>
     </div>
 </nav>
-  
-<div class="container">
- <div class="row">
-	<div class="col-sm-8">
-	  	<h3>Tâche</h3>
-  		<p>ICI IL Y AURA LES TACHES</p>
-	</div>
-	<div class="col-sm-4" >
-	<div class="panel panel-default">
-      		<div class="panel-heading">Liste de tâches</div>
-      		<div class="panel-body">ICI IL Y AURAT LA LISTE BRO</div>
-    	</div>
-	</div>
-</div> 
-
-</div>
-
-</body>
-</html>
