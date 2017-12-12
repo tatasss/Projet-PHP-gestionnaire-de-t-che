@@ -18,7 +18,7 @@
  </div>
  <ul class="nav navbar-nav">
 <li class="active"><a href="index.php">taches public</a></li>
-<li ><a href="vue/tacheprive.php">mes taches</a></li>
+<li ><a href="index.php?action=connection">mes taches</a></li>
 <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Tache Publique<span class="caret"></span></a>
   <ul class="dropdown-menu">
  <li><a href="vue/AjouetrTachePu.php">Ajouter tache publique</a></li>
@@ -38,7 +38,7 @@
  </ul>
 <ul class="nav navbar-nav navbar-right">
 <li><a href="vue/inscription.php"><span class="glyphicon glyphicon-user"></span> S'inscrire</a></li>
-<li ><a href="vue/connection.php" ><span class="glyphicon glyphicon-log-in"></span> Se connecter</a></li>
+<li ><a href="index.php?action=connection" ><span class="glyphicon glyphicon-log-in"></span> Se connecter</a></li>
  	</ul>
   </div>
 </nav>

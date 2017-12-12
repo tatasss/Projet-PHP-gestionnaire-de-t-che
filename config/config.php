@@ -11,4 +11,5 @@ $vue['erreur']='vue/erreur.php';
 $vue['index']='vue/indexVue.php';
 $vue['public']='vue/public.php';
 $vue['prive']='vue/privee.php';
+$vue['connection']='vue/connection.php';
 ?>
