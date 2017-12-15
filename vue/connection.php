@@ -56,23 +56,23 @@
 </nav>
   
 <div class="container">
-	<form class="form-horizontal">
+	<form class="form-horizontal"  method="post" name="myform" id="myform">
   		<div class="form-group">
    		 <label class="control-label col-sm-2" for="email">Email:</label>
    		 <div class="col-sm-10">
-    		 	<input type="email" class="form-control" id="email" placeholder="Enter email">
+    		 	<input type="nom" value="<?= $dVue['nom']  ?>" class="form-control" id="donNom" name="donNom" placeholder="Entrer nom">
    		 </div>
   		</div>
   		<div class="form-group">
-    		<label class="control-label col-sm-2" for="pwd">Password:</label>
+    		<label class="control-label col-sm-2"  for="pwd">Password:</label>
     		<div class="col-sm-10">
-      		<input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      		<input type="password" class="form-control"  value="<?= $dVue['mdp']  ?>"name="donpwd" id="donpwd" placeholder="Entrer mot de passe">
     		</div>
   		</div>
   		<div class="form-group">
     		<div class="col-sm-offset-2 col-sm-10">
       		<div class="checkbox">
-        			<label><input type="checkbox"> Remember me</label>
+        			<label><input type="checkbox" name="donremem"> Remember me</label>
       		</div>
     		</div>
   		</div>

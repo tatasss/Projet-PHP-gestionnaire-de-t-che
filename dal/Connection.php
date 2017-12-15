@@ -1,5 +1,7 @@
 <?php
-namespace dal;
+//namespace dal;
+    use PDO;
+
     class Connection extends PDO{
         private $stmt;
         public function __construct($dsn, $username, $passwd)

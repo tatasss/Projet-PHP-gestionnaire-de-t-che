@@ -1,15 +1,16 @@
 <?php
-//prefixe
-$rep=__DIR__.'/../';
-//liste des modules à inclures
-$dConfig['include']=array('Validation.php');
-$base="";
-$login="";
-$mdp="";
-//liste des vue
-$vue['erreur']='vue/erreur.php';
-$vue['index']='vue/indexVue.php';
-$vue['public']='vue/public.php';
-$vue['prive']='vue/privee.php';
-$vue['connection']='vue/connection.php';
-?>
+class Config{
+    static $rep=__DIR__.'/../';
+    //liste des modules à inclures
+    static $dConfig=array('include'=>'Validation.php');
+    static $dsn ="mysql:host=localhost;dbname=dbMatthias";
+    static $login ="matthias";
+    static $mdp = "judoka43";
+    //liste des vue
+    static $vue=array('erreur' =>'vue/erreur.php',
+                      'index'=>'vue/indexVue.php',
+                      'public'=>'vue/public.php',
+                      'prive'=>'vue/privee.php',
+                      'connection'=>'vue/connection.php');
+
+}

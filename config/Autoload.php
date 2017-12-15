@@ -12,7 +12,7 @@ class Autoload
 	private static function _autoload($class){
 		global $rep;
 		$filename = $class.'.php';
-		$dir=array('modeles/','./','config/','controleur/','vue/','dal/');
+		$dir=array('modele/','./','config/','controler/','vue/','dal/');
 		foreach($dir as $d){
 			$file=$rep.$d.$filename;
 			if(file_exists($file)){

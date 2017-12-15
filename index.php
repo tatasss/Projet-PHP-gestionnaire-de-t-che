@@ -9,6 +9,7 @@ echo '</ pre>';
 */
 
 //require ($vue['index']);
-$cont = new FrontController($vue);
+$cont = new FrontController();
+
 ?>
 

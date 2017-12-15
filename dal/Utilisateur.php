@@ -10,11 +10,13 @@ namespace dal;
 class Utilisateur
 {
     private $nom;
+
     private $isAdmin;
 
     public function __construct($nom,$isAdmin)
     {
         $this->nom=$nom;
         $this->isAdmin=$isAdmin;
+
     }
 }

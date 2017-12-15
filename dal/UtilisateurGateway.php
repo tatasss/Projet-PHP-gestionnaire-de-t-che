@@ -1,5 +1,5 @@
 <?php
-namespace dal;
+use Connection;
 /**
  * Created by PhpStorm.
  * User: argiraud
@@ -9,15 +9,15 @@ namespace dal;
 
 class UtilisateurGateway
 {
-    public function __construct($con)
+    public function __construct(Connection $con)
     {
         $this->con=$con;
     }
 
     public function findUser($nom, $mdp){
         $query='SELECT * FROM UTILISATEUR WHERE nom=:nom AND mdp=:mdp';
-        $this->con->executeQuery($query, array(':nom' => array($nom, PDO::PARAM_INIT),
-        ':mdp' => array($mdp, PDO::PARAM_INIT)));
+        $this->con->executeQuery($query, array(':nom' => array($nom, PDO::PARAM_STR),
+        ':mdp' => array($mdp, PDO::PARAM_STR)));
         $results=$this->con->getResults();
         return $this->getInstances($results);
     }

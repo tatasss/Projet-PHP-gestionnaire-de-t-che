@@ -1,19 +1,25 @@
 <?php
 
+//use dal\Connection;
+//require (__DIR__.config/config.php);
+
 /**
  * Created by PhpStorm.
  * User: magaydu
  * Date: 02/12/2017
  * Time: 10:59
  */
+
 //require ("validation.php");
 class FrontController
 {
 
-    public function __construct($vueConf)
+
+    public function __construct()
     {
-        global $vue;
-        $vue= $vueConf;
+
+
+
         session_start();
 
 
@@ -29,14 +35,14 @@ class FrontController
 
 
                 case NULL :
-                    $this->reinit($vue);
+                    $this->reinit();
                     break;
                 case "connection":
-                    $this->chercherFormulaireCo($vue);
+                    $this->chercherFormulaireCo($dVueEreur);
                     break;
                 default:
                     $dVueEreur[] =	"Erreur d'appel php";
-                    require ($vue['index']);
+                    require (config::$vue['index']);
                     break;
             }
 
@@ -44,13 +50,13 @@ class FrontController
         {
             //si erreur BD, pas le cas ici
             $dVueEreur[] =	"Erreur inattendue!!! ";
-            require ($vue['erreur']);
+            require (config::$vue['erreur']);
 
         }
         catch (Exception $e2)
         {
             $dVueEreur[] =	"Erreur inattendue!!! ";
-            require ($vue['erreur']);
+            require (config::$vue['erreur']);
         }
 
 
@@ -60,14 +66,31 @@ class FrontController
 
     }
 
-	function reinit($vue){
+	function reinit(){
         $dVue = array (
             'nom' => "",
-            'age' => 0,
+            'mdp' => "",
         );
-        require ($vue['index']);
+        require (config::$vue['index']);
     }
-    function  chercherFormulaireCo($vue){
-        require($vue['connection']);
+
+    /**
+     * @param $vue
+     * @param $dVueEreur
+     */
+    function  chercherFormulaireCo($dVueEreur){
+        $con=new Connection(config::$dsn,config::$login,config::$mdp);
+       $notreUsegt=new UtilisateurGateway($con);
+       require(config::$vue['connection']);
+        $nom=$_POST['donNom'];
+        $mdp=$_POST['donpwd'];
+        Validation::nettoyerString($nom);
+        Validation::nettoyerString($mdp);
+        $dvue=array(
+            'nom'=>$nom,
+            'mdp'=>$mdp,
+        );
+
+       $notreUser=$notreUsegt->findUser($nom,$mdp);
     }
 }
