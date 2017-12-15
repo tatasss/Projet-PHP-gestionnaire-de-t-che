@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ccf37a1e-d72e-4240-9e86-d5676685aa04" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controler/FrontController.php" afterPath="$PROJECT_DIR$/controler/FrontController.php" />
-      <change beforePath="$PROJECT_DIR$/modele/ModeleUtilisateur.php" afterPath="$PROJECT_DIR$/modele/ModeleUtilisateur.php" />
-      <change beforePath="$PROJECT_DIR$/vue/connection.php" afterPath="$PROJECT_DIR$/vue/connection.php" />
-    </list>
+    <list default="true" id="ccf37a1e-d72e-4240-9e86-d5676685aa04" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connection.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="connection.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vue/connection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-372">
-              <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            <state relative-caret-position="330">
+              <caret line="62" column="55" lean-forward="false" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
               <folding>
                 <marker date="1513354222913" expanded="true" signature="2680:2910" ph="..." />
                 <marker date="1513354222913" expanded="true" signature="2753:2910" ph="..." />
@@ -110,7 +105,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -285,12 +280,12 @@
       <workItem from="1513183392111" duration="6726000" />
       <workItem from="1513342262698" duration="137000" />
       <workItem from="1513342431071" duration="603000" />
-      <workItem from="1513348483826" duration="7843000" />
+      <workItem from="1513348483826" duration="8469000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24503000" />
+    <option name="totallyTimeSpent" value="25129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="75" y="16" width="1303" height="780" extended-state="6" />
@@ -759,26 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-372">
-          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-          <folding>
-            <marker date="1513354222913" expanded="true" signature="2680:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2753:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2782:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2883:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3035:3193" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3138:3193" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3305:3499" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3351:3488" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3382:3475" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3528:3668" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3574:3657" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modele/ModeleUtilisateur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -800,6 +775,26 @@
         <state relative-caret-position="90">
           <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="62" column="55" lean-forward="false" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+          <folding>
+            <marker date="1513354222913" expanded="true" signature="2680:2910" ph="..." />
+            <marker date="1513354222913" expanded="true" signature="2753:2910" ph="..." />
+            <marker date="1513354222913" expanded="true" signature="2782:2910" ph="..." />
+            <marker date="1513354222913" expanded="true" signature="2883:2910" ph="..." />
+            <marker date="1513354222913" expanded="true" signature="3035:3193" ph="..." />
+            <marker date="1513354222913" expanded="true" signature="3138:3193" ph="..." />
+            <marker date="1513354222913" expanded="true" signature="3305:3499" ph="..." />
+            <marker date="1513354222913" expanded="true" signature="3351:3488" ph="..." />
+            <marker date="1513354222913" expanded="true" signature="3382:3475" ph="..." />
+            <marker date="1513354222913" expanded="true" signature="3528:3668" ph="..." />
+            <marker date="1513354222913" expanded="true" signature="3574:3657" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
