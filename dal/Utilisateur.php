@@ -19,4 +19,36 @@ class Utilisateur
         $this->isAdmin=$isAdmin;
 
     }
+
+    /**
+     * @return mixed
+     */
+    public function getisAdmin()
+    {
+        return $this->isAdmin;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param mixed $isAdmin
+     */
+    public function setIsAdmin($isAdmin)
+    {
+        $this->isAdmin = $isAdmin;
+    }
+
+    /**
+     * @param mixed $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
 }

@@ -6,18 +6,22 @@
  * Time: 11:04
  */
 namespace modele;
+use dal\ListeTaches;
+use dal\Tache;
+use dal\TacheGateway;
+
 require_once '../dal/connection.php';
 require_once '../dal/TacheGateway.php';
 
 class ModeleTache
 {
     private $tache_gateway;
-    private $con;
+
     private $tab;
 
     public function __construct()
     {
-        $con=new Connection("jbjbu","cnsld","dsknks");
+        $con=new \Connection("jbjbu","cnsld","dsknks");
         $this->tache_gateway = new TacheGateway($con);
 
     }

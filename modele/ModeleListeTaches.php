@@ -7,6 +7,8 @@
  */
 namespace modele;
 
+use dal\ListeTachesGateway;
+
 require_once '../dal/ListeTachesGateway.php';
 require_once '../dal/connection.php';
 
@@ -14,11 +16,10 @@ class ModeleListeTaches
 {
 
     private $liste_gateway;
-    private $con;
 
     public function __construct()
     {
-        $this->con=new Connection("jbjbu","cnsld","dsknks");
+        $con=new \Connection("jbjbu","cnsld","dsknks");
         $this->tache_gateway = new ListeTachesGateway($con);
 
     }
