@@ -7,6 +7,7 @@
  */
 namespace modele;
 
+use dal\ListeTaches;
 use dal\ListeTachesGateway;
 
 require_once '../dal/ListeTachesGateway.php';
@@ -20,7 +21,7 @@ class ModeleListeTaches
     public function __construct()
     {
         $con=new \Connection("jbjbu","cnsld","dsknks");
-        $this->tache_gateway = new ListeTachesGateway($con);
+        $this->liste_gateway = new ListeTachesGateway($con);
 
     }
 
@@ -29,7 +30,7 @@ class ModeleListeTaches
     }
 
     public function supprimerTache(ListeTaches $liste){
-        $this->liste_gateway->supprimerListeTaches($liste);
+        $this->liste_gateway->supprimerListeTache($liste);
     }
 
     public function tachesDeListe (ListeTaches $listeTaches){
