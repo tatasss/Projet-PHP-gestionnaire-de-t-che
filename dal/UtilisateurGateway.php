@@ -19,13 +19,14 @@ class UtilisateurGateway
         $this->con->executeQuery($query, array(':nom' => array($nom, PDO::PARAM_STR),
         ':mdp' => array($mdp, PDO::PARAM_STR)));
         $results=$this->con->getResults();
+        if($results==null) return null;
         return $this->getInstances($results);
     }
 
     private function getInstances(array $results){
-        $retour=[];
+        $retour;
         foreach ($results as $row) {
-            $retour[] = new Utilisateur($row['nom'], $row['isAdmin']);
+            $retour = new \dal\Utilisateur($row['nom'], $row['isAdmin']);
         }
         return $retour;
     }

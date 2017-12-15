@@ -15,12 +15,13 @@ class ModeleUtilisateur
     private $utilisateur;
     public function __construct()
     {
-        $con=new \Connection("jbjbu","cnsld","dsknks");
+        $con=new \Connection(\Config::$dsn,\Config::$login,\Config::$mdp);
         $this->utilisateur_gateway = new \UtilisateurGateway($con);
 
     }
 
     public function findUser($nom,$mdp){
         $this->utilisateur=$this->utilisateur_gateway->findUser($nom,$mdp);
+        if ($this->utilisateur==null)throw new \Exception("l'utilisateur inconu");
     }
 }

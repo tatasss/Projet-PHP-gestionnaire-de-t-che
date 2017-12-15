@@ -20,7 +20,7 @@ class ModeleListeTaches
 
     public function __construct()
     {
-        $con=new \Connection("jbjbu","cnsld","dsknks");
+        $con=new \Connection(\Config::$dsn,\Config::$login,\Config::$mdp);
         $this->liste_gateway = new ListeTachesGateway($con);
 
     }

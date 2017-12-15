@@ -21,7 +21,7 @@ class ModeleTache
 
     public function __construct()
     {
-        $con=new \Connection("jbjbu","cnsld","dsknks");
+        $con=new \Connection(\Config::$dsn,\Config::$login,\Config::$mdp);
         $this->tache_gateway = new TacheGateway($con);
 
     }
