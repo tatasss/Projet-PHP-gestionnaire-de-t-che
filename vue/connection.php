@@ -21,7 +21,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body color="blue">
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -60,13 +60,13 @@
   		<div class="form-group">
    		 <label class="control-label col-sm-2" for="email">Email:</label>
    		 <div class="col-sm-10">
-    		 	<input type="nom" value="<?= $dVue['nom']  ?>" class="form-control" id="donNom" name="donNom" placeholder="Entrer nom">
+    		 	<input type="nom" class="form-control" id="donNom" name="donNom" placeholder="Entrer nom">
    		 </div>
   		</div>
   		<div class="form-group">
     		<label class="control-label col-sm-2"  for="pwd">Password:</label>
     		<div class="col-sm-10">
-      		<input type="password" class="form-control"  value="<?= $dVue['mdp']  ?>"name="donpwd" id="donpwd" placeholder="Entrer mot de passe">
+      		<input type="password" class="form-control"  name="donpwd" id="donpwd" placeholder="Entrer mot de passe">
     		</div>
   		</div>
   		<div class="form-group">

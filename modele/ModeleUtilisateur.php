@@ -6,7 +6,7 @@
  * Time: 16:56
  */
 
-namespace modele;
+
 
 
 class ModeleUtilisateur

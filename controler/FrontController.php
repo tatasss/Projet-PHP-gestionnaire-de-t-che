@@ -3,6 +3,7 @@
 //use dal\Connection;
 //require (__DIR__.config/config.php);
 
+
 /**
  * Created by PhpStorm.
  * User: magaydu
@@ -19,7 +20,7 @@ class FrontController
     {
 
 
-
+    global $user,$connecte;
         session_start();
 
 
@@ -79,8 +80,8 @@ class FrontController
      * @param $dVueEreur
      */
     function  chercherFormulaireCo($dVueEreur){
-        $con=new Connection(config::$dsn,config::$login,config::$mdp);
-       $notreUsegt=new UtilisateurGateway($con);
+
+       $notreUsegt=new ModeleUtilisateur();
        require(config::$vue['connection']);
         $nom=$_POST['donNom'];
         $mdp=$_POST['donpwd'];
@@ -90,7 +91,11 @@ class FrontController
             'nom'=>$nom,
             'mdp'=>$mdp,
         );
+        try {
+            $notreUsegt->findUser($nom, $mdp);
 
-       $notreUser=$notreUsegt->findUser($nom,$mdp);
+        }catch (Exception $e){
+            echo "utilisateur not found";
+        }
     }
 }
