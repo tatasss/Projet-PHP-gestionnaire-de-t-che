@@ -17,6 +17,6 @@ class ListeTaches
         $this->description=$description;
     }
     public function getNom(){
-        return $nom_liste;
+        return $this->nom_liste;
     }
 }

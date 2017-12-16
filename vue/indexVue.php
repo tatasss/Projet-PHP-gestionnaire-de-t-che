@@ -58,7 +58,7 @@
 
                 <?php
                 foreach ($_SESSION['listeTachePuNom'] as $row)
-                echo "<li>".$row->getNom()."</li>" ?>
+                    print ("<li>".$row->getNom()."</li>") ;?>
                 </ul>
             </div>
     	</div>

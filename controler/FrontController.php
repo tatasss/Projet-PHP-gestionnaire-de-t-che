@@ -26,6 +26,7 @@ class FrontController
     $modeleList=new ModeleListeTaches();
         $notreUsegt=new ModeleUtilisateur();
         session_start();
+       // $_SESSION['listeTachePuNom']=[];
         $this->affichlistePu($modeleList);
 
 //debut
