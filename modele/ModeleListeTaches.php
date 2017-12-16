@@ -5,13 +5,11 @@
  * Date: 09/12/2017
  * Time: 10:59
  */
-namespace modele;
 
-use dal\ListeTaches;
-use dal\ListeTachesGateway;
 
-require_once '../dal/ListeTachesGateway.php';
-require_once '../dal/connection.php';
+
+
+
 
 class ModeleListeTaches
 {
@@ -20,7 +18,7 @@ class ModeleListeTaches
 
     public function __construct()
     {
-        $con=new \Connection(\Config::$dsn,\Config::$login,\Config::$mdp);
+        $con=new Connection(\Config::$dsn,\Config::$login,\Config::$mdp);
         $this->liste_gateway = new ListeTachesGateway($con);
 
     }
@@ -38,4 +36,16 @@ class ModeleListeTaches
         return $tab;
     }
 
+    /**
+     * @return ListeTachesGateway
+     */
+    public  function getByProprio($nomProp){
+        $tab=$this->liste_gateway->findByProprio($nomProp);
+        return $tab;
+    }
+    public function getListePublic()
+    {
+        $tab=$this->liste_gateway->getListePublic();
+        return $this->$tab;
+    }
 }

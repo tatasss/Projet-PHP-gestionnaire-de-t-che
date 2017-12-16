@@ -53,7 +53,14 @@
 	<div class="col-sm-4" >
 	<div class="panel panel-default">
       		<div class="panel-heading">Liste de tâches</div>
-      		<div class="panel-body">ICI IL Y AURAT LA LISTE BRO</div>
+      		<div class="panel-body">
+                <ul>
+
+                <?php
+                foreach ($_SESSION['listeTachePuNom'] as $row)
+                echo "<li>".$row->getNom()."</li>" ?>
+                </ul>
+            </div>
     	</div>
 	</div>
 </div> 

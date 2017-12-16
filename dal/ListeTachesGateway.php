@@ -5,7 +5,7 @@
  * Date: 08/12/2017
  * Time: 16:50
  */
-namespace dal;
+
 class ListeTachesGateway
 {
     private $con;
@@ -15,14 +15,14 @@ class ListeTachesGateway
     }
 
     public function findByName($nom){
-        $query='SELECT * FROM LISTETACHES WHERE nom=:nom';
+        $query='SELECT * FROM ListeTaches WHERE nom=:nom';
         $this->con->executeQuery($query, array(':nom' => array($nom, PDO::PARAM_INIT)));
         $results=$this->con->getResults();
         return $this->getInstances($results);
     }
 
     public function findByProprio($proprietaire){
-        $query='SELECT * FROM LISTETACHES WHERE proprietaire=:proprietaire';
+        $query='SELECT * FROM ListeTaches WHERE proprietaire=:proprietaire';
         $this->con->executeQuery($query, array(':proprietaire' => array($proprietaire, PDO::PARAM_INIT)));
         $results=$this->con->getResults();
         return $this->getInstances($results);
@@ -37,7 +37,7 @@ class ListeTachesGateway
     }
 
     public function insererListeTache(ListeTaches $liste){
-        $this->con->executeQuery('INSERT INTO LISTETACHES VALUES (:id,:nom)',
+        $this->con->executeQuery('INSERT INTO ListeTaches VALUES (:id,:nom)',
             array(':id'=>array($liste->getId(),PDO::PARAM_INIT),
                 ':nom'=>array($liste->getNomListe(),PDO::PARAM_STR)));
     }
@@ -52,4 +52,12 @@ class ListeTachesGateway
         $tab=$modele_tache->tachesDeListe($liste);
         return $tab;
     }
+    public function getListePublic(){
+        $this->con->executeQuery('SELECT * FROM ListeTaches WHERE is_public=1 ',
+            array());
+        $results=$this->con->getResults();
+        return $this->getInstances($results);
+
+    }
+
 }

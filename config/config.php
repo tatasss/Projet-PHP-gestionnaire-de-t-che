@@ -10,7 +10,7 @@ class Config{
     static $vue=array('erreur' =>'vue/erreur.php',
                       'index'=>'vue/indexVue.php',
                       'public'=>'vue/public.php',
-                      'prive'=>'vue/privee.php',
+                      'base'=>'index.php',
                       'connection'=>'vue/connection.php');
 
 }

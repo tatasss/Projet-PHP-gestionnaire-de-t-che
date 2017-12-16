@@ -58,9 +58,9 @@
 <div class="container">
 	<form class="form-horizontal"  method="post" name="myform" id="myform">
   		<div class="form-group">
-   		 <label class="control-label col-sm-2" for="email">Email:</label>
+   		 <label class="control-label col-sm-2" for="nom">nom:</label>
    		 <div class="col-sm-10">
-    		 	<input type="nom" class="form-control" id="donNom" name="donNom" placeholder="Entrer nom">
+    		 	<input type="text" class="form-control" id="donNom" name="donNom" placeholder="Entrer nom">
    		 </div>
   		</div>
   		<div class="form-group">
@@ -78,7 +78,9 @@
   		</div>
   		<div class="form-group">
     		<div class="col-sm-offset-2 col-sm-10">
-      		<button type="submit" class="btn btn-default">Submit</button>
+      		<button type="submit"  class="btn btn-default">Se connecter
+                <input type="hidden" name="action" value="verifCo">
+            </button>
     		</div>
   		</div>
 	</form> 

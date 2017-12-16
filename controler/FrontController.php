@@ -20,9 +20,13 @@ class FrontController
     {
 
 
-    global $user,$connecte;
+    global $connecte;
+    global $notreUsegt;
+    global $modeleList;
+    $modeleList=new ModeleListeTaches();
+        $notreUsegt=new ModeleUtilisateur();
         session_start();
-
+        $this->affichlistePu($modeleList);
 
 //debut
 
@@ -38,8 +42,14 @@ class FrontController
                 case NULL :
                     $this->reinit();
                     break;
+
                 case "connection":
                     $this->chercherFormulaireCo($dVueEreur);
+                    break;
+                case "verifCo":
+                    $notreUsegt=$this->valideForm($notreUsegt);
+                    $_SESSION['utilisateur']=$notreUsegt;
+                    require (config::$vue['index']);
                     break;
                 default:
                     $dVueEreur[] =	"Erreur d'appel php";
@@ -54,11 +64,11 @@ class FrontController
             require (config::$vue['erreur']);
 
         }
-        catch (Exception $e2)
-        {
-            $dVueEreur[] =	"Erreur inattendue!!! ";
-            require (config::$vue['erreur']);
+        catch (Exception $e2) {
+            $dVueEreur[] = "Erreur inattendue!!! ";
+            require(config::$vue['erreur']);
         }
+        session_destroy();
 
 
 //fin
@@ -81,21 +91,36 @@ class FrontController
      */
     function  chercherFormulaireCo($dVueEreur){
 
-       $notreUsegt=new ModeleUtilisateur();
+
        require(config::$vue['connection']);
+
+    }
+    function valideForm($notreUsegt){
+
         $nom=$_POST['donNom'];
+        //echo $_POST['donNom'];
         $mdp=$_POST['donpwd'];
-        Validation::nettoyerString($nom);
-        Validation::nettoyerString($mdp);
-        $dvue=array(
+        //echo $_POST['donpwd'];
+        $nom=Validation::nettoyerString($nom);
+        $mdp=Validation::nettoyerString($mdp);
+        /*$dvue=array(
             'nom'=>$nom,
             'mdp'=>$mdp,
-        );
+        );*/
         try {
             $notreUsegt->findUser($nom, $mdp);
 
         }catch (Exception $e){
-            echo "utilisateur not found";
+            echo $e->getMessage();
         }
+        return $notreUsegt;
+
     }
+    function affichlistePu($modeleList){
+
+        $_SESSION['listeTachePuNom']=$modeleList->getListePublic();
+
+    }
+
+
 }

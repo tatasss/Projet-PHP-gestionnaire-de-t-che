@@ -12,7 +12,7 @@
 class ModeleUtilisateur
 {
     private $utilisateur_gateway;
-    private $utilisateur;
+    private $utilisateur ;
     public function __construct()
     {
         $con=new \Connection(\Config::$dsn,\Config::$login,\Config::$mdp);
@@ -22,6 +22,12 @@ class ModeleUtilisateur
 
     public function findUser($nom,$mdp){
         $this->utilisateur=$this->utilisateur_gateway->findUser($nom,$mdp);
-        if ($this->utilisateur==null)throw new \Exception("l'utilisateur inconu");
+
+        if ($this->utilisateur==null)
+            throw new \Exception(" l'utilisateur inconu");
+    }
+    public function getNom(){
+        return $this->utilisateur->getNom();
+
     }
 }

@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ccf37a1e-d72e-4240-9e86-d5676685aa04" name="Default" comment="" />
+    <list default="true" id="ccf37a1e-d72e-4240-9e86-d5676685aa04" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
+      <change beforePath="$PROJECT_DIR$/controler/FrontController.php" afterPath="$PROJECT_DIR$/controler/FrontController.php" />
+      <change beforePath="$PROJECT_DIR$/dal/ListeTaches.php" afterPath="$PROJECT_DIR$/dal/ListeTaches.php" />
+      <change beforePath="$PROJECT_DIR$/dal/ListeTachesGateway.php" afterPath="$PROJECT_DIR$/dal/ListeTachesGateway.php" />
+      <change beforePath="$PROJECT_DIR$/dal/Utilisateur.php" afterPath="$PROJECT_DIR$/dal/Utilisateur.php" />
+      <change beforePath="$PROJECT_DIR$/dal/UtilisateurGateway.php" afterPath="$PROJECT_DIR$/dal/UtilisateurGateway.php" />
+      <change beforePath="$PROJECT_DIR$/modele/ModeleListeTaches.php" afterPath="$PROJECT_DIR$/modele/ModeleListeTaches.php" />
+      <change beforePath="$PROJECT_DIR$/modele/ModeleUtilisateur.php" afterPath="$PROJECT_DIR$/modele/ModeleUtilisateur.php" />
+      <change beforePath="$PROJECT_DIR$/vue/connection.php" afterPath="$PROJECT_DIR$/vue/connection.php" />
+      <change beforePath="$PROJECT_DIR$/vue/indexVue.php" afterPath="$PROJECT_DIR$/vue/indexVue.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,43 +23,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="FrontController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controler/FrontController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1222">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Autoload.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/Autoload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="53" lean-forward="false" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/autoload.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="434">
+              <caret line="118" column="38" lean-forward="false" selection-start-line="118" selection-start-column="38" selection-end-line="118" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -55,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/dal/Connection.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
-              <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+              <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -64,8 +60,63 @@
       <file leaf-file-name="indexVue.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue/indexVue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="420">
+              <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModeleListeTaches.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modele/ModeleListeTaches.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TacheGateway.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dal/TacheGateway.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-948">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1513008665360" expanded="true" signature="350:388" ph="SELECT * FRO... TACHE" />
+                <marker date="1513008665360" expanded="true" signature="873:943" ph="INSERT INTO Tache... " />
+                <marker date="1513008665360" expanded="true" signature="1395:1521" ph="UPDATE Tache... " />
+                <marker date="1513008665360" expanded="true" signature="1988:2022" ph="DELETE FROM Tache... " />
+                <marker date="1513008665360" expanded="true" signature="2399:2438" ph="SELECT * FRO... Tache" />
+                <marker date="1513008665360" expanded="true" signature="2688:2707" ph="SELECT * FRO... Tache" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListeTachesGateway.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dal/ListeTachesGateway.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="56" column="21" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+              <folding>
+                <marker date="1513421009131" expanded="true" signature="278:318" ph="SELECT * FRO... LISTETACHES" />
+                <marker date="1513421009131" expanded="true" signature="572:630" ph="SELECT * FRO... LISTETACHES" />
+                <marker date="1513421009131" expanded="true" signature="1203:1244" ph="INSERT INTO LISTETACHES... " />
+                <marker date="1513421009131" expanded="true" signature="1485:1517" ph="DELETE FROM Tache... " />
+                <marker date="1513421009131" expanded="true" signature="1852:1884" ph="SELECT * fro... Tache" />
+                <marker date="1513421009131" expanded="true" signature="1852:1895" ph="SELECT * FRO... ListeTaches" />
+                <marker date="1513421009131" expanded="true" signature="1865:1884" ph="DELETE FROM Tache... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListeTaches.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dal/ListeTaches.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,42 +125,20 @@
       <file leaf-file-name="UtilisateurGateway.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dal/UtilisateurGateway.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="630">
+              <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
               <folding>
-                <element signature="e#6#21#0#PHP" expanded="true" />
+                <marker date="1513417040485" expanded="true" signature="371:424" ph="SELECT * FRO... UTILISATEUR" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connection.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="connection.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue/connection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="62" column="55" lean-forward="false" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
-              <folding>
-                <marker date="1513354222913" expanded="true" signature="2680:2910" ph="..." />
-                <marker date="1513354222913" expanded="true" signature="2753:2910" ph="..." />
-                <marker date="1513354222913" expanded="true" signature="2782:2910" ph="..." />
-                <marker date="1513354222913" expanded="true" signature="2883:2910" ph="..." />
-                <marker date="1513354222913" expanded="true" signature="3035:3193" ph="..." />
-                <marker date="1513354222913" expanded="true" signature="3138:3193" ph="..." />
-                <marker date="1513354222913" expanded="true" signature="3305:3499" ph="..." />
-                <marker date="1513354222913" expanded="true" signature="3351:3488" ph="..." />
-                <marker date="1513354222913" expanded="true" signature="3382:3475" ph="..." />
-                <marker date="1513354222913" expanded="true" signature="3528:3668" ph="..." />
-                <marker date="1513354222913" expanded="true" signature="3574:3657" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+            <state relative-caret-position="470">
+              <caret line="81" column="65" lean-forward="false" selection-start-line="81" selection-start-column="65" selection-end-line="81" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -118,14 +147,19 @@
       <file leaf-file-name="ModeleUtilisateur.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modele/ModeleUtilisateur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>LISTETACHES</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -134,18 +168,22 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/vue/ajouterTache.php" />
-        <option value="$PROJECT_DIR$/vue/indexVue.php" />
         <option value="$PROJECT_DIR$/modele/Utilisateur.php" />
-        <option value="$PROJECT_DIR$/dal/Utilisateur.php" />
         <option value="$PROJECT_DIR$/vue/erreur.php" />
         <option value="$PROJECT_DIR$/config/Autoload.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/dal/Connection.php" />
+        <option value="$PROJECT_DIR$/controler/ErreurController.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
         <option value="$PROJECT_DIR$/vue/connection.php" />
         <option value="$PROJECT_DIR$/dal/UtilisateurGateway.php" />
+        <option value="$PROJECT_DIR$/dal/Utilisateur.php" />
         <option value="$PROJECT_DIR$/modele/ModeleUtilisateur.php" />
+        <option value="$PROJECT_DIR$/vue/indexVue.php" />
         <option value="$PROJECT_DIR$/controler/FrontController.php" />
-        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/dal/ListeTaches.php" />
+        <option value="$PROJECT_DIR$/modele/ModeleListeTaches.php" />
+        <option value="$PROJECT_DIR$/dal/ListeTachesGateway.php" />
       </list>
     </option>
   </component>
@@ -199,6 +237,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -235,7 +274,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -280,15 +318,16 @@
       <workItem from="1513183392111" duration="6726000" />
       <workItem from="1513342262698" duration="137000" />
       <workItem from="1513342431071" duration="603000" />
-      <workItem from="1513348483826" duration="8469000" />
+      <workItem from="1513348483826" duration="9396000" />
+      <workItem from="1513362922984" duration="11922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25129000" />
+    <option name="totallyTimeSpent" value="37978000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="16" width="1303" height="780" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16372022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -296,12 +335,12 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -322,6 +361,47 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dal/TacheGateway.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1513008665360" expanded="true" signature="350:388" ph="SELECT * FRO... TACHE" />
+            <marker date="1513008665360" expanded="true" signature="873:943" ph="INSERT INTO Tache... " />
+            <marker date="1513008665360" expanded="true" signature="1395:1521" ph="UPDATE Tache... " />
+            <marker date="1513008665360" expanded="true" signature="1988:2022" ph="DELETE FROM Tache... " />
+            <marker date="1513008665360" expanded="true" signature="2399:2438" ph="SELECT * FRO... Tache" />
+            <marker date="1513008665360" expanded="true" signature="2688:2707" ph="SELECT * FRO... Tache" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/indexVue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/UtilisateurGateway.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding>
+            <marker date="1513417040485" expanded="true" signature="371:424" ph="SELECT * FRO... UTILISATEUR" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1332">
+          <caret line="74" column="74" lean-forward="true" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -398,7 +478,7 @@
         <state relative-caret-position="18">
           <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding>
-            <element signature="e#6#21#0#PHP" expanded="true" />
+            <marker date="1513417040485" expanded="true" signature="371:424" ph="SELECT * FRO... UTILISATEUR" />
           </folding>
         </state>
       </provider>
@@ -407,120 +487,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1332">
           <caret line="74" column="74" lean-forward="true" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
-          <folding>
-            <marker date="1513354222913" expanded="true" signature="2680:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2753:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2782:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2883:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3035:3193" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3138:3193" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3305:3499" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3351:3488" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3382:3475" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3528:3668" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3574:3657" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controler/FrontController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1422">
-          <caret line="79" column="29" lean-forward="false" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/erreur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/Autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dal/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dal/TacheGateway.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1513008665360" expanded="true" signature="350:388" ph="SELECT * FRO... TACHE" />
-            <marker date="1513008665360" expanded="true" signature="873:943" ph="INSERT INTO Tache... " />
-            <marker date="1513008665360" expanded="true" signature="1395:1521" ph="UPDATE Tache... " />
-            <marker date="1513008665360" expanded="true" signature="1988:2022" ph="DELETE FROM Tache... " />
-            <marker date="1513008665360" expanded="true" signature="2399:2438" ph="SELECT * FRO... Tache" />
-            <marker date="1513008665360" expanded="true" signature="2688:2707" ph="SELECT * FRO... Tache" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/indexVue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dal/UtilisateurGateway.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-          <folding>
-            <element signature="e#6#21#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1332">
-          <caret line="74" column="74" lean-forward="true" selection-start-line="74" selection-start-column="74" selection-end-line="74" selection-end-column="74" />
-          <folding>
-            <marker date="1513354222913" expanded="true" signature="2680:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2753:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2782:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2883:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3035:3193" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3138:3193" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3305:3499" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3351:3488" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3382:3475" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3528:3668" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3574:3657" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -552,7 +519,7 @@
         <state relative-caret-position="18">
           <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding>
-            <element signature="e#6#21#0#PHP" expanded="true" />
+            <marker date="1513417040485" expanded="true" signature="371:424" ph="SELECT * FRO... UTILISATEUR" />
           </folding>
         </state>
       </provider>
@@ -568,19 +535,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="55" selection-end-column="6" />
-          <folding>
-            <marker date="1513354222913" expanded="true" signature="2680:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2753:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2782:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2883:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3035:3193" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3138:3193" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3305:3499" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3351:3488" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3382:3475" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3528:3668" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3574:3657" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -627,19 +582,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="55" selection-end-column="6" />
-          <folding>
-            <marker date="1513354222913" expanded="true" signature="2680:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2753:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2782:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2883:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3035:3193" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3138:3193" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3305:3499" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3351:3488" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3382:3475" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3528:3668" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3574:3657" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -674,36 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dal/Utilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dal/TacheGateway.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1513008665360" expanded="true" signature="350:388" ph="SELECT * FRO... TACHE" />
-            <marker date="1513008665360" expanded="true" signature="873:943" ph="INSERT INTO Tache... " />
-            <marker date="1513008665360" expanded="true" signature="1395:1521" ph="UPDATE Tache... " />
-            <marker date="1513008665360" expanded="true" signature="1988:2022" ph="DELETE FROM Tache... " />
-            <marker date="1513008665360" expanded="true" signature="2399:2438" ph="SELECT * FRO... Tache" />
-            <marker date="1513008665360" expanded="true" signature="2688:2707" ph="SELECT * FRO... Tache" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/erreur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/Autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -728,72 +641,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dal/Connection.php">
+    <entry file="file://$PROJECT_DIR$/controler/ErreurController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="40" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+        <state relative-caret-position="126">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/indexVue.php">
+    <entry file="file://$PROJECT_DIR$/vue/erreur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dal/UtilisateurGateway.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#21#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/ModeleUtilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controler/FrontController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1222">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="126">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        <state relative-caret-position="216">
+          <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controler/ControllerAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controler/ControllerUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/Utilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/Connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/TacheGateway.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-948">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1513008665360" expanded="true" signature="350:388" ph="SELECT * FRO... TACHE" />
+            <marker date="1513008665360" expanded="true" signature="873:943" ph="INSERT INTO Tache... " />
+            <marker date="1513008665360" expanded="true" signature="1395:1521" ph="UPDATE Tache... " />
+            <marker date="1513008665360" expanded="true" signature="1988:2022" ph="DELETE FROM Tache... " />
+            <marker date="1513008665360" expanded="true" signature="2399:2438" ph="SELECT * FRO... Tache" />
+            <marker date="1513008665360" expanded="true" signature="2688:2707" ph="SELECT * FRO... Tache" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/ModeleUtilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/connection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="62" column="55" lean-forward="false" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+        <state relative-caret-position="470">
+          <caret line="81" column="65" lean-forward="false" selection-start-line="81" selection-start-column="65" selection-end-line="81" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/UtilisateurGateway.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
           <folding>
-            <marker date="1513354222913" expanded="true" signature="2680:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2753:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2782:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="2883:2910" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3035:3193" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3138:3193" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3305:3499" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3351:3488" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3382:3475" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3528:3668" ph="..." />
-            <marker date="1513354222913" expanded="true" signature="3574:3657" ph="..." />
+            <marker date="1513417040485" expanded="true" signature="371:424" ph="SELECT * FRO... UTILISATEUR" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/ListeTaches.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/indexVue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="59" column="36" lean-forward="false" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controler/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="118" column="38" lean-forward="false" selection-start-line="118" selection-start-column="38" selection-end-line="118" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/ModeleListeTaches.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/ListeTachesGateway.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="56" column="21" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+          <folding>
+            <marker date="1513421009131" expanded="true" signature="278:318" ph="SELECT * FRO... LISTETACHES" />
+            <marker date="1513421009131" expanded="true" signature="572:630" ph="SELECT * FRO... LISTETACHES" />
+            <marker date="1513421009131" expanded="true" signature="1203:1244" ph="INSERT INTO LISTETACHES... " />
+            <marker date="1513421009131" expanded="true" signature="1485:1517" ph="DELETE FROM Tache... " />
+            <marker date="1513421009131" expanded="true" signature="1852:1884" ph="SELECT * fro... Tache" />
+            <marker date="1513421009131" expanded="true" signature="1852:1895" ph="SELECT * FRO... ListeTaches" />
+            <marker date="1513421009131" expanded="true" signature="1865:1884" ph="DELETE FROM Tache... " />
           </folding>
         </state>
       </provider>

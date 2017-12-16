@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: argiraud
- * Date: 08/12/2017
- * Time: 16:09
- */
-namespace dal;
+
 class ListeTaches
 {
     private $id;
@@ -21,5 +15,8 @@ class ListeTaches
         $this->is_public=$is_public;
         $this->proprietaire=$proprietaire;
         $this->description=$description;
+    }
+    public function getNom(){
+        return $nom_liste;
     }
 }
