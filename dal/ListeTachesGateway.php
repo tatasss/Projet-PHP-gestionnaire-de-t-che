@@ -1,4 +1,7 @@
 <?php
+
+
+
 /**
  * Created by PhpStorm.
  * User: argiraud
@@ -16,14 +19,14 @@ class ListeTachesGateway
 
     public function findByName($nom){
         $query='SELECT * FROM ListeTaches WHERE nom=:nom';
-        $this->con->executeQuery($query, array(':nom' => array($nom, PDO::PARAM_INIT)));
+        $this->con->executeQuery($query, array(':nom' => array($nom, PDO::PARAM_INT)));
         $results=$this->con->getResults();
         return $this->getInstances($results);
     }
 
     public function findByProprio($proprietaire){
         $query='SELECT * FROM ListeTaches WHERE proprietaire=:proprietaire';
-        $this->con->executeQuery($query, array(':proprietaire' => array($proprietaire, PDO::PARAM_INIT)));
+        $this->con->executeQuery($query, array(':proprietaire' => array($proprietaire, PDO::PARAM_INT)));
         $results=$this->con->getResults();
         return $this->getInstances($results);
     }
@@ -38,13 +41,13 @@ class ListeTachesGateway
 
     public function insererListeTache(ListeTaches $liste){
         $this->con->executeQuery('INSERT INTO ListeTaches VALUES (:id,:nom)',
-            array(':id'=>array($liste->getId(),PDO::PARAM_INIT),
+            array(':id'=>array($liste->getId(),PDO::PARAM_INT),
                 ':nom'=>array($liste->getNomListe(),PDO::PARAM_STR)));
     }
 
     public function supprimerListeTache(ListeTaches $liste){
         $this->con->executeQuery('DELETE FROM Tache WHERE id = :id ',
-            array(':id'=>array($liste->getId(),PDO::PARAM_INIT)));
+            array(':id'=>array($liste->getId(),PDO::PARAM_INT)));
     }
 
     public function tachesDeListe (ListeTaches $liste){
@@ -52,9 +55,9 @@ class ListeTachesGateway
         $tab=$modele_tache->tachesDeListe($liste);
         return $tab;
     }
-    public function getListePublic(){
-        $this->con->executeQuery('SELECT * FROM ListeTaches WHERE is_public=1 ',
-            array());
+    public function getListe($ispublic){
+        $this->con->executeQuery('SELECT * FROM ListeTaches WHERE is_public= :ispublic ',
+            array(':ispublic'=>array($ispublic,PDO::PARAM_INT)));
         $results=$this->con->getResults();
         return $this->getInstances($results);
 

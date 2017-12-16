@@ -45,7 +45,7 @@ class ModeleListeTaches
     }
     public function getListePublic()
     {
-        return $this->liste_gateway->getListePublic();
+        return $this->liste_gateway->getListe(1);
 
     }
 }

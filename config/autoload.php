@@ -4,10 +4,10 @@ class autoload
 	private static $_instance= null;
 	public static function charger(){
 		if(null!=self::$_instance){
-			throw new Exception(sprintf('%s is already started',__CLASS__));}
+			throw new RuntimeException(sprintf('%s is already started',__CLASS__));}
 		self::$_instance = new self();
 		if(!spl_autoload_register(array(self::$_instance,'_autoload'),false)){
-			throw new Exception(sprintf('%s : Could not start the autoload',__CLASS__));}
+			throw new RuntimeException(sprintf('%s : Could not start the autoload',__CLASS__));}
 	}
 	private static function _autoload($class){
 		global $rep;

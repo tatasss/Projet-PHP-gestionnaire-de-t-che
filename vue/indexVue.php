@@ -18,7 +18,7 @@
         </div>
         <ul class="nav navbar-nav">
 
-            <li class="active"><a href="index.php">taches public</a></li>
+            <li class="active"><a href="index.php?action=index">taches public</a></li>
             <li><a href="index.php">mes taches</a></li>
             <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Tache Publique<span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -56,9 +56,7 @@
       		<div class="panel-body">
                 <ul>
 
-                <?php
-                foreach ($_SESSION['listeTachePuNom'] as $row)
-                    print ("<li>".$row->getNom()."</li>") ;?>
+                <?php FrontController::affichlistePu(new ModeleListeTaches())?>
                 </ul>
             </div>
     	</div>

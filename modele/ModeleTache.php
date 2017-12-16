@@ -5,13 +5,7 @@
  * Date: 02/12/2017
  * Time: 11:04
  */
-namespace modele;
-use dal\ListeTaches;
-use dal\Tache;
-use dal\TacheGateway;
 
-require_once '../dal/connection.php';
-require_once '../dal/TacheGateway.php';
 
 class ModeleTache
 {

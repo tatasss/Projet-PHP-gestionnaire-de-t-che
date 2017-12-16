@@ -1,6 +1,6 @@
 <?php
 //namespace dal;
-    use PDO;
+    //use PDO;
 
     class Connection extends PDO{
         private $stmt;

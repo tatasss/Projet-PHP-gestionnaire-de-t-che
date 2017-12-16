@@ -1,5 +1,5 @@
 <?php
-use Connection;
+
 /**
  * Created by PhpStorm.
  * User: argiraud

@@ -24,22 +24,25 @@ class FrontController
     global $notreUsegt;
     global $modeleList;
     $modeleList=new ModeleListeTaches();
-        $notreUsegt=new ModeleUtilisateur();
-        session_start();
-       // $_SESSION['listeTachePuNom']=[];
-        $this->affichlistePu($modeleList);
+    $notreUsegt=new ModeleUtilisateur();
+
+    session_start();
+
+
+
 
 //debut
 
 //on initialise un tableau d'erreur
         $dVueEreur = array ();
-
+        config::$tab=$this->affichlistePu($modeleList);
         try{
             $action=$_REQUEST['action'];
 
             switch($action) {
-
-
+                case 'index':
+                    require (config::$vue['index']);
+                    break;
                 case NULL :
                     $this->reinit();
                     break;
@@ -96,7 +99,7 @@ class FrontController
        require(config::$vue['connection']);
 
     }
-    function valideForm($notreUsegt){
+    function valideForm(ModeleUtilisateur $notreUsegt){
 
         $nom=$_POST['donNom'];
         //echo $_POST['donNom'];
@@ -117,10 +120,15 @@ class FrontController
         return $notreUsegt;
 
     }
-    function affichlistePu($modeleList){
 
-        $_SESSION['listeTachePuNom']=$modeleList->getListePublic();
+    /**
+     * @param $modeleList
+     */
+    static function affichlistePu(ModeleListeTaches $modeleList){
 
+        config::$tab=$modeleList->getListePublic();
+        foreach (config::$tab as $row)
+            print ("<li>".$row->getNom()."</li>");
     }
 
 

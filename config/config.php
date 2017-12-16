@@ -12,5 +12,5 @@ class Config{
                       'public'=>'vue/public.php',
                       'base'=>'index.php',
                       'connection'=>'vue/connection.php');
-
+    static $tab=[];
 }
