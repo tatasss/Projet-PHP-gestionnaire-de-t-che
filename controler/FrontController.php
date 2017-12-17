@@ -35,7 +35,7 @@ class FrontController
 
 //on initialise un tableau d'erreur
         $dVueEreur = array ();
-        config::$tab=$this->affichlistePu($modeleList);
+        //config::$tab=$this->affichlistePu($modeleList);
         try{
             $action=$_REQUEST['action'];
 
@@ -125,10 +125,13 @@ class FrontController
      * @param $modeleList
      */
     static function affichlistePu(ModeleListeTaches $modeleList){
-
+        //$modeleList->creerListeTache('lol',1,'aa','ceci est fait par le front controller');
         config::$tab=$modeleList->getListePublic();
+        $i=0;
+
         foreach (config::$tab as $row)
-            print ("<li>".$row->getNom()."</li>");
+            print ("<button type=\"button\" class=\"btn btn-primary btn-block\">".$row->getNom()."</button> ");
+
     }
 
 

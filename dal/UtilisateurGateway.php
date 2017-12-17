@@ -17,7 +17,7 @@ class UtilisateurGateway
     /**
      * @param $nom
      * @param $mdp
-     * @return \dal\Utilisateur|null
+     * @return Utilisateur|null
      */
     public function findUser($nom, $mdp){
         $query='SELECT * FROM Utilisateur WHERE nom=:nom AND mdp=:mdp';
@@ -28,7 +28,7 @@ class UtilisateurGateway
         return $this->getInstances($results);
     }
 
-    private function getInstances(array $results):Utilisateur{
+    private function getInstances(array $results){
 
         $retour =null;
 

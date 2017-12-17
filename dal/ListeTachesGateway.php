@@ -34,11 +34,17 @@ class ListeTachesGateway
     private function getInstances(array $results){
         $retour=[];
         foreach ($results as $row) {
-            $retour[] = new ListeTaches($row['id'], $row['nom'],$row['is_public'],$row['proprietaire'],$row['description']);
+            $retour[] = new ListeTaches($row['id'], $row['nom_liste'],$row['is_public'],$row['proprietaire'],$row['description']);
         }
         return $retour;
     }
-
+    private function getInstancesPU(array $results){
+        $retour=[];
+        foreach ($results as $row) {
+            $retour[] = new ListeTaches($row['id'], $row['nom_liste'],$row['is_public'],'public',$row['description']);
+        }
+        return $retour;
+    }
     public function insererListeTache(ListeTaches $liste){
         $this->con->executeQuery('INSERT INTO ListeTaches VALUES (:id,:nom)',
             array(':id'=>array($liste->getId(),PDO::PARAM_INT),
@@ -59,8 +65,17 @@ class ListeTachesGateway
         $this->con->executeQuery('SELECT * FROM ListeTaches WHERE is_public= :ispublic ',
             array(':ispublic'=>array($ispublic,PDO::PARAM_INT)));
         $results=$this->con->getResults();
-        return $this->getInstances($results);
+        return $this->getInstancesPU($results);
 
     }
+    /*public function getMaxIndex(){
+        $this->con->executeQuery('SELECT MAX(id) FROM ListeTaches',
+            array());
+        $results=$this->con->getResults();
+        $mavar=$this->getInstances($results);
+
+            return $mavar['MAX(id)'];
+
+    }*/
 
 }

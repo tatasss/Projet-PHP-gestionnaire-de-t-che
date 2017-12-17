@@ -37,7 +37,7 @@ class ModeleListeTaches
     }
 
     /**
-     * @return ListeTachesGateway
+     * @return array
      */
     public  function getByProprio($nomProp){
         $tab=$this->liste_gateway->findByProprio($nomProp);
@@ -47,5 +47,8 @@ class ModeleListeTaches
     {
         return $this->liste_gateway->getListe(1);
 
+    }
+    public function creerListeTache($nom,$pub,$proprio,$description){
+        $this->insererTache(new ListeTaches($this->liste_gateway->getMaxIndex() +1,$nom,$pub,$proprio,$description));
     }
 }

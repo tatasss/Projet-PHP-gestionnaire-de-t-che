@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccf37a1e-d72e-4240-9e86-d5676685aa04" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/config/Autoload.php" afterPath="$PROJECT_DIR$/config/Autoload.php" />
-      <change beforePath="$PROJECT_DIR$/config/autoload.php" afterPath="$PROJECT_DIR$/config/autoload.php" />
       <change beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
       <change beforePath="$PROJECT_DIR$/controler/FrontController.php" afterPath="$PROJECT_DIR$/controler/FrontController.php" />
-      <change beforePath="$PROJECT_DIR$/dal/Connection.php" afterPath="$PROJECT_DIR$/dal/Connection.php" />
+      <change beforePath="$PROJECT_DIR$/dal/ListeTaches.php" afterPath="$PROJECT_DIR$/dal/ListeTaches.php" />
       <change beforePath="$PROJECT_DIR$/dal/ListeTachesGateway.php" afterPath="$PROJECT_DIR$/dal/ListeTachesGateway.php" />
-      <change beforePath="$PROJECT_DIR$/dal/Tache.php" afterPath="$PROJECT_DIR$/dal/Tache.php" />
-      <change beforePath="$PROJECT_DIR$/dal/TacheGateway.php" afterPath="$PROJECT_DIR$/dal/TacheGateway.php" />
       <change beforePath="$PROJECT_DIR$/dal/UtilisateurGateway.php" afterPath="$PROJECT_DIR$/dal/UtilisateurGateway.php" />
       <change beforePath="$PROJECT_DIR$/modele/ModeleListeTaches.php" afterPath="$PROJECT_DIR$/modele/ModeleListeTaches.php" />
-      <change beforePath="$PROJECT_DIR$/modele/ModeleTache.php" afterPath="$PROJECT_DIR$/modele/ModeleTache.php" />
-      <change beforePath="$PROJECT_DIR$/vue/ajouterTache.php" afterPath="$PROJECT_DIR$/vue/ajouterTache.php" />
-      <change beforePath="$PROJECT_DIR$/vue/connection.php" afterPath="$PROJECT_DIR$/vue/connection.php" />
-      <change beforePath="$PROJECT_DIR$/vue/indexVue.php" afterPath="$PROJECT_DIR$/vue/indexVue.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FrontController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FrontController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controler/FrontController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2304">
-              <caret line="128" column="9" lean-forward="true" selection-start-line="128" selection-start-column="8" selection-end-line="130" selection-end-column="50" />
+            <state relative-caret-position="470">
+              <caret line="132" column="80" lean-forward="false" selection-start-line="132" selection-start-column="80" selection-end-line="132" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -53,69 +44,80 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="90">
+              <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/autoload.php">
+      <file leaf-file-name="indexVue.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/indexVue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+            <state relative-caret-position="330">
+              <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Autoload.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/Autoload.php">
+      <file leaf-file-name="ModeleListeTaches.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modele/ModeleListeTaches.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            <state relative-caret-position="506">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerAdmin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controler/ControllerAdmin.php">
+      <file leaf-file-name="Connection.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dal/Connection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="378">
+              <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerUser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controler/ControllerUser.php">
+      <file leaf-file-name="ListeTachesGateway.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dal/ListeTachesGateway.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="78" column="7" lean-forward="false" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
+              <folding>
+                <marker date="1513550540055" expanded="true" signature="281:321" ph="SELECT * FRO... LISTETACHES" />
+                <marker date="1513550540055" expanded="true" signature="574:632" ph="SELECT * FRO... LISTETACHES" />
+                <marker date="1513550540055" expanded="true" signature="1478:1519" ph="INSERT INTO LISTETACHES... " />
+                <marker date="1513550540055" expanded="true" signature="1759:1791" ph="DELETE FROM Tache... " />
+                <marker date="1513550540055" expanded="true" signature="2128:2160" ph="SELECT * fro... Tache" />
+                <marker date="1513550540055" expanded="true" signature="2128:2180" ph="SELECT * FRO... ListeTaches" />
+                <marker date="1513550540055" expanded="true" signature="2141:2160" ph="DELETE FROM Tache... " />
+                <marker date="1513550540055" expanded="true" signature="2419:2450" ph="SELECT MAX(i... ListeTaches" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListeTaches.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dal/ListeTaches.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="docVide.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controler/docVide.txt">
+      <file leaf-file-name="UtilisateurGateway.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dal/UtilisateurGateway.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModeleTache.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modele/ModeleTache.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="450">
+              <caret line="30" column="49" lean-forward="false" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+              <folding>
+                <marker date="1513543063800" expanded="true" signature="351:404" ph="SELECT * FRO... UTILISATEUR" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,11 +132,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajouterTache.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/ajouterTache.php">
+      <file leaf-file-name="docVide.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controler/docVide.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="62" lean-forward="false" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -159,21 +161,21 @@
         <option value="$PROJECT_DIR$/controler/ErreurController.php" />
         <option value="$PROJECT_DIR$/dal/Utilisateur.php" />
         <option value="$PROJECT_DIR$/modele/ModeleUtilisateur.php" />
-        <option value="$PROJECT_DIR$/dal/ListeTaches.php" />
-        <option value="$PROJECT_DIR$/modele/ModeleListeTaches.php" />
         <option value="$PROJECT_DIR$/dal/Connection.php" />
-        <option value="$PROJECT_DIR$/dal/UtilisateurGateway.php" />
         <option value="$PROJECT_DIR$/vue/connection.php" />
         <option value="$PROJECT_DIR$/vue/ajouterTache.php" />
-        <option value="$PROJECT_DIR$/config/config.php" />
-        <option value="$PROJECT_DIR$/controler/FrontController.php" />
-        <option value="$PROJECT_DIR$/vue/indexVue.php" />
-        <option value="$PROJECT_DIR$/dal/ListeTachesGateway.php" />
         <option value="$PROJECT_DIR$/modele/ModeleTache.php" />
         <option value="$PROJECT_DIR$/dal/TacheGateway.php" />
         <option value="$PROJECT_DIR$/dal/Tache.php" />
         <option value="$PROJECT_DIR$/config/Autoload.php" />
         <option value="$PROJECT_DIR$/config/autoload.php" />
+        <option value="$PROJECT_DIR$/vue/indexVue.php" />
+        <option value="$PROJECT_DIR$/modele/ModeleListeTaches.php" />
+        <option value="$PROJECT_DIR$/dal/UtilisateurGateway.php" />
+        <option value="$PROJECT_DIR$/dal/ListeTaches.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/dal/ListeTachesGateway.php" />
+        <option value="$PROJECT_DIR$/controler/FrontController.php" />
       </list>
     </option>
   </component>
@@ -310,12 +312,12 @@
       <workItem from="1513342431071" duration="603000" />
       <workItem from="1513348483826" duration="9396000" />
       <workItem from="1513362922984" duration="13161000" />
-      <workItem from="1513434948988" duration="3153000" />
+      <workItem from="1513434948988" duration="9790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42370000" />
+    <option name="totallyTimeSpent" value="49007000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="75" y="16" width="1303" height="780" extended-state="6" />
@@ -428,7 +430,7 @@
         <state relative-caret-position="18">
           <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding>
-            <marker date="1513435620480" expanded="true" signature="356:409" ph="SELECT * FRO... UTILISATEUR" />
+            <marker date="1513543063800" expanded="true" signature="351:404" ph="SELECT * FRO... UTILISATEUR" />
           </folding>
         </state>
       </provider>
@@ -469,7 +471,7 @@
         <state relative-caret-position="18">
           <caret line="1" column="14" lean-forward="true" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding>
-            <marker date="1513435620480" expanded="true" signature="356:409" ph="SELECT * FRO... UTILISATEUR" />
+            <marker date="1513543063800" expanded="true" signature="351:404" ph="SELECT * FRO... UTILISATEUR" />
           </folding>
         </state>
       </provider>
@@ -585,51 +587,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/indexVue.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dal/Connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dal/ListeTaches.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dal/ListeTachesGateway.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <marker date="1513437878592" expanded="true" signature="281:321" ph="SELECT * FRO... LISTETACHES" />
-            <marker date="1513437878592" expanded="true" signature="574:632" ph="SELECT * FRO... LISTETACHES" />
-            <marker date="1513437878592" expanded="true" signature="1204:1245" ph="INSERT INTO LISTETACHES... " />
-            <marker date="1513437878592" expanded="true" signature="1485:1517" ph="DELETE FROM Tache... " />
-            <marker date="1513437878592" expanded="true" signature="1854:1886" ph="SELECT * fro... Tache" />
-            <marker date="1513437878592" expanded="true" signature="1854:1906" ph="SELECT * FRO... ListeTaches" />
-            <marker date="1513437878592" expanded="true" signature="1867:1886" ph="DELETE FROM Tache... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -664,36 +626,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dal/UtilisateurGateway.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <marker date="1513435620480" expanded="true" signature="356:409" ph="SELECT * FRO... UTILISATEUR" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/ModeleListeTaches.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modele/ModeleTache.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/ModeleUtilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -706,42 +642,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controler/ControllerAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controler/ControllerUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controler/docVide.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controler/FrontController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2304">
-          <caret line="128" column="9" lean-forward="true" selection-start-line="128" selection-start-column="8" selection-end-line="130" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -757,7 +661,106 @@
     <entry file="file://$PROJECT_DIR$/config/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controler/ControllerAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controler/docVide.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/Connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/indexVue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/ModeleUtilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/UtilisateurGateway.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="49" lean-forward="false" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+          <folding>
+            <marker date="1513543063800" expanded="true" signature="351:404" ph="SELECT * FRO... UTILISATEUR" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/ListeTaches.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/ModeleListeTaches.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/ListeTachesGateway.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="78" column="7" lean-forward="false" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
+          <folding>
+            <marker date="1513550540055" expanded="true" signature="281:321" ph="SELECT * FRO... LISTETACHES" />
+            <marker date="1513550540055" expanded="true" signature="574:632" ph="SELECT * FRO... LISTETACHES" />
+            <marker date="1513550540055" expanded="true" signature="1478:1519" ph="INSERT INTO LISTETACHES... " />
+            <marker date="1513550540055" expanded="true" signature="1759:1791" ph="DELETE FROM Tache... " />
+            <marker date="1513550540055" expanded="true" signature="2128:2160" ph="SELECT * fro... Tache" />
+            <marker date="1513550540055" expanded="true" signature="2128:2180" ph="SELECT * FRO... ListeTaches" />
+            <marker date="1513550540055" expanded="true" signature="2141:2160" ph="DELETE FROM Tache... " />
+            <marker date="1513550540055" expanded="true" signature="2419:2450" ph="SELECT MAX(i... ListeTaches" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controler/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="132" column="80" lean-forward="false" selection-start-line="132" selection-start-column="80" selection-end-line="132" selection-end-column="80" />
           <folding />
         </state>
       </provider>
