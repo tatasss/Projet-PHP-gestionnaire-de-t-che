@@ -10,7 +10,7 @@ class ControllerVisiteur
 {
     public function __construct($action)
     {
-        session_start();
+
 
         $dVueErreur = array ();
 
@@ -18,7 +18,12 @@ class ControllerVisiteur
 
 
             switch($action) {
-
+                case "index":
+                    $this->getIndex();
+                    breack;
+                case "ajouterListeTache":
+                    require(Config::$vue['ajoutache']);
+                    break;
                 case "ajouterListeTachesPublic":
                     $this->ajouterListesTachePublic($dVueErreur);
                     break;
@@ -33,27 +38,29 @@ class ControllerVisiteur
 
                 default:
                     $dVueErreur[] =	"Erreur d'appel php";
-                    require (config::$vue['mesTaches']);
+                    require (config::$vue['index']);
                     break;
             }
 
         } catch (PDOException $e)
         {
             $dVueErreur[] =	"Erreur inattendue!!! ";
-            require ($rep.$vues['erreur']);
+            //require ($rep.$vues['erreur']);
 
         }
         catch (Exception $e2)
         {
             $dVueErreur[] =	"Erreur inattendue!!! ";
-            require ($rep.$vues['erreur']);
+            //require ($rep.$vues['erreur']);
         }
 
 
 
         exit(0);
     }
-
+    function getIndex(){
+        require (config::$vue['index']);
+    }
 
     function afficherTachePublic(array $dVueErreur) {
 
@@ -94,9 +101,45 @@ class ControllerVisiteur
 
         $model = new ModeleTache();
 
-        $model->insererTache(,$nom,$date_debut,$date_fin,$description);
+        $model->insererTache(config::$id_list+1,$nom,$date_debut,$date_fin,$description);
 
         $this->afficherTachePublic($dVueErreur);
+    }
+    static function affichlistePu(ModeleListeTaches $modeleList){
+        //$modeleList->creerListeTache('lol',1,'aa','ceci est fait par le front controller');
+        config::$tab=$modeleList->getListePublic();
+        $i=0;
+        print("<form method='post' action='index.php' name='getliste' id='getliste'>");
+        foreach (config::$tab as $row) {
+            $i=$row->getId();
+            print ("<button type='checkbox'id='$i' name='idList' value='$i' class=\"btn btn-primary btn-block\">" . $row->getNom() .
+                "</button> ");
+
+        }
+        print("</form>");
+
+
+    }
+    static function getValue(ModeleTache $modeTache){
+
+
+        if(isset($_POST['idList']))$mavar=$_POST['idList'];
+        else $mavar=1;
+        // (int) $liste=$modeleList->getListeById($_POST['idList']);
+        // foreach ($liste as $row) {
+        $tab = $modeTache->tachesDeListe($mavar);
+        //    echo($row->getNomTache());
+        foreach ($tab as $row){
+            print('<div class="panel panel-default">');
+            print('<div class="panel-heading">');
+            print $row->getNomTache();
+            print ('</div>');
+            print('<div class="panel-body">');
+            print $row->getDescriptionTache();
+            print('</div>');
+            print('</div>');
+        }
+
     }
 
 }

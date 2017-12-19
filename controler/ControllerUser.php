@@ -10,7 +10,8 @@ class ControllerUser
 {
     public function __construct($action)
     {
-        session_start();
+        global $notreUsegt;
+        $notreUsegt=new ModeleUtilisateur();
 
         $dVueErreur = array ();
 
@@ -18,30 +19,56 @@ class ControllerUser
 
 
             switch($action) {
+                case "connection":
+                    $this->chercherFormulaireCo($dVueErreur);
+                    break;
+                case "verifCo":
+                    $_SESSION['connecte']=1;
 
+                       // require(config::$vue['connection']);
+                        try {
+                            $notreUsegt = $this->valideForm($notreUsegt);
+                            $_SESSION['connecte'] = 1;
+                            $_REQUEST['action']=null;
+
+                        } catch (Exception $e) {
+                            $_SESSION['connecte'] = 0;
+                        }
+                        if ($_SESSION['connecte'] == 0) {
+                            require config::$vue['connection'];
+                            echo " <div class='row'><div class='col-sm-4'></div>
+                                <div class='col-sm-4'>Veuillez Reessayer votre connection</div>
+                            <div class='col-sm-4'></div>";
+
+                        } else {
+                            $_SESSION['utilisateur'] = $notreUsegt;
+                            require config::$vue['index'];
+
+                        }
+                   exit(0);
                 case "supprimerListeTachesPrivee":
-                    $this->supprimerListeTachesPrivee($dVueErreur);
+
                     break;
 
                 case "ajouterListeTachesPrivee":
-                    $this->ajouterListeTachesPrivee($dVueErreur);
+
                     break;
 
                 case "supprimerTachePrivee":
-                    $this->supprimerTachePrivee($dVueErreur);
+
                     break;
 
                 case "ajouterTachePrivee":
-                    $this->ajouterTachePrivee($dVueErreur);
+
                     break;
 
                 case "afficherTachePrivee":
-                    $this->afficherTachePrivee($dVueErreur);
+
                     break;
 
                 default:
                     $dVueErreur[] =	"Erreur d'appel php";
-                    require (config::$vue['mesTaches']);
+                    //require (config::$vue['mesTaches']);
                     break;
             }
 
@@ -112,7 +139,7 @@ class ControllerUser
 
         $model = new ModeleTache();
 
-        $model->insererTache(,$nom,$date_debut,$date_fin,$description);
+        $model->insererTache(999,$nom,$date_debut,$date_fin,$description);
 
         $this->afficherTachePrivee($dVueErreur);
     }
@@ -124,6 +151,30 @@ class ControllerUser
         $model->supprimerTache($nom);
 
         $this->afficherTachePrivee($dVueErreur);
+    }
+    function valideForm(ModeleUtilisateur $notreUsegt)
+    {
+        $nom=$_POST['donNom'];
+        //echo $_POST['donNom'];
+        $mdp=$_POST['donpwd'];
+        //echo $_POST['donpwd'];
+        $nom=Validation::nettoyerString($nom);
+        $mdp=Validation::nettoyerString($mdp);
+        /*$dvue=array(
+            'nom'=>$nom,
+            'mdp'=>$mdp,
+        );*/
+
+            $notreUsegt->findUser($nom, $mdp);
+
+
+        return $notreUsegt;
+    }
+    function  chercherFormulaireCo($dVueEreur){
+
+
+        require(config::$vue['connection']);
+
     }
 
 }

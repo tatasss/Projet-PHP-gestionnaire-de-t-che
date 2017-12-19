@@ -24,7 +24,7 @@ class ModeleUtilisateur
         $this->utilisateur=$this->utilisateur_gateway->findUser($nom,$mdp);
 
         if ($this->utilisateur==null)
-            throw new \Exception(" l'utilisateur inconu");
+            throw new Exception(' l utilisateur inconu');
     }
     public function getNom(){
         return $this->utilisateur->getNom();

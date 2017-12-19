@@ -9,7 +9,7 @@ class Config{
     //liste des vue
     static $vue=array('erreur' =>'vue/erreur.php',
                       'index'=>'vue/indexVue.php',
-                      'public'=>'vue/public.php',
+                      'ajoutache'=>'vue/ajouterTache.php',
                       'base'=>'index.php',
                       'connection'=>'vue/connection.php');
     static $tab=[];

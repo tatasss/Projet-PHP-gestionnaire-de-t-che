@@ -39,7 +39,8 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <!--<li><a href="vue/inscription.php"><span class="glyphicon glyphicon-user"></span> S'inscrire</a></li>-->
-            <li><a href="index.php?action=connection" ><span class="glyphicon glyphicon-log-in"></span> Se connecter</a></li>
+            <?php if($_SESSION['connecte']=0)?><li><a href="index.php?action=connection" ><span class="glyphicon glyphicon-log-in"></span> Se connecter</a></li>
+
         </ul>
     </div>
 </nav>
@@ -50,15 +51,15 @@
 	  	<h3>Tâche   <button type="button" class="btn btn-success">ajouter</button></h3>
 
 
-        <?php $this->getValue(new ModeleTache())?>
+        <?php ControllerVisiteur::getValue(new ModeleTache())?>
 	</div>
 	<div class="col-sm-4" >
 	<div class="panel panel-default">
-      		<div class="panel-heading">Liste de tâches   <button type="button" class="btn btn-success">ajouter</button></div>
+      		<div class="panel-heading">Liste de tâches   <form method="post" action="index.php?action=ajouterListeTache"> <button type="submit" name="action" id="ajoutertache" type="button" class="btn btn-success">ajouter</button></form></div>
       		<div class="panel-body">
                 <ul>
 
-                <?php $this->affichlistePu(new ModeleListeTaches(),new ModeleTache())?>
+                <?php ControllerVisiteur::affichlistePu(new ModeleListeTaches(),new ModeleTache())?>
                 </ul>
             </div>
     	</div>

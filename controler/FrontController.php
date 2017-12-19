@@ -16,14 +16,18 @@ class FrontController
 {
 
 
+    /**
+     * FrontController constructor.
+     */
     public function __construct()
     {
 
-
+    global $idList;
     global $connecte;
     global $notreUsegt;
     global $modeleList;
     global $modeleTache;
+    $idList=1;
     $modeleList=new ModeleListeTaches();
     $notreUsegt=new ModeleUtilisateur();
     $modeleTache=new ModeleTache();
@@ -39,23 +43,26 @@ class FrontController
         $dVueEreur = array ();
         //config::$tab=$this->affichlistePu($modeleList);
         try{
-            $action=$_REQUEST['action'];
+            if(isset($_REQUEST['action']))$action=$_REQUEST['action'];
+            else $action=null;
 
             switch($action) {
                 case 'index':
-                    require (config::$vue['index']);
+                    new ControllerVisiteur($action);
                     break;
                 case NULL :
                     $this->reinit();
                     break;
-
-                case "connection":
-                    $this->chercherFormulaireCo($dVueEreur);
+                case "ajouterListeTache":
+                    new ControllerVisiteur($action);
                     break;
-                case "verifCo":
-                    $notreUsegt=$this->valideForm($notreUsegt);
-                    $_SESSION['utilisateur']=$notreUsegt;
-                    require (config::$vue['index']);
+                case "connection":
+                    new ControllerUser($action);
+                    break;
+                case "verifCo":new ControllerUser($action);
+                    break;
+                case "ajoutertache":
+                    $this->ajoutache();
                     break;
                 default:
                     $dVueEreur[] =	"Erreur d'appel php";
@@ -90,77 +97,5 @@ class FrontController
         );
         require (config::$vue['index']);
     }
-
-    /**
-     * @param $vue
-     * @param $dVueEreur
-     */
-    function  chercherFormulaireCo($dVueEreur){
-
-
-       require(config::$vue['connection']);
-
-    }
-    function valideForm(ModeleUtilisateur $notreUsegt){
-
-        $nom=$_POST['donNom'];
-        //echo $_POST['donNom'];
-        $mdp=$_POST['donpwd'];
-        //echo $_POST['donpwd'];
-        $nom=Validation::nettoyerString($nom);
-        $mdp=Validation::nettoyerString($mdp);
-        /*$dvue=array(
-            'nom'=>$nom,
-            'mdp'=>$mdp,
-        );*/
-        try {
-            $notreUsegt->findUser($nom, $mdp);
-
-        }catch (Exception $e){
-            echo $e->getMessage();
-        }
-        return $notreUsegt;
-
-    }
-
-    /**
-     * @param $modeleList
-     */
-    function affichlistePu(ModeleListeTaches $modeleList){
-        //$modeleList->creerListeTache('lol',1,'aa','ceci est fait par le front controller');
-        config::$tab=$modeleList->getListePublic();
-        $i=0;
-        print("<form method='post' nom='getliste' id='getliste'>");
-        foreach (config::$tab as $row) {
-            $i=$row->getId();
-            print ("<button type='submit'id='$i' name='idList' value='$i' class=\"btn btn-primary btn-block\">" . $row->getNom() .
-                "</button> ");
-
-        }
-        print("</form>");
-
-
-    }
-    function getValue(ModeleTache $modeTache){
-
-
-
-           // (int) $liste=$modeleList->getListeById($_POST['idList']);
-           // foreach ($liste as $row) {
-                $tab = $modeTache->tachesDeListe($_POST['idList']);
-            //    echo($row->getNomTache());
-        foreach ($tab as $row){
-            print('<div class="panel panel-default">');
-            print('<div class="panel-heading">');
-            print $row->getNomTache();
-            print ('</div>');
-            print('<div class="panel-body">');
-            print $row->getDescriptionTache();
-            print('</div>');
-            print('</div>');
-        }
-
-    }
-
 
 }
