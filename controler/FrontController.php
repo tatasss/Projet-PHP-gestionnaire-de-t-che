@@ -27,7 +27,7 @@ class FrontController
     global $notreUsegt;
     global $modeleList;
     global $modeleTache;
-    $idList=1;
+
     $modeleList=new ModeleListeTaches();
     $notreUsegt=new ModeleUtilisateur();
     $modeleTache=new ModeleTache();
@@ -54,6 +54,9 @@ class FrontController
                     $this->reinit();
                     break;
                 case "ajouterListeTache":
+                    new ControllerVisiteur($action);
+                    break;
+                case "verifListe":
                     new ControllerVisiteur($action);
                     break;
                 case "connection":

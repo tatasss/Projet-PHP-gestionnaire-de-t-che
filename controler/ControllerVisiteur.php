@@ -24,6 +24,10 @@ class ControllerVisiteur
                 case "ajouterListeTache":
                     require(Config::$vue['ajoutache']);
                     break;
+                case "verifListe":
+                    $this->valideFormListe(new ModeleListeTaches());
+                    require (Config::$vue['index']);
+                    break;
                 case "ajouterListeTachesPublic":
                     $this->ajouterListesTachePublic($dVueErreur);
                     break;
@@ -104,6 +108,27 @@ class ControllerVisiteur
         $model->insererTache(config::$id_list+1,$nom,$date_debut,$date_fin,$description);
 
         $this->afficherTachePublic($dVueErreur);
+    }
+    function valideFormListe(ModeleListeTaches $modelist)
+    {
+        $nom=$_POST['donNomListe'];
+        //echo $_POST['donNomListe'];
+        $des=$_POST['donDescription'];
+        //echo $_POST['donDescription'];
+        $nom=Validation::nettoyerString($nom);
+        $des=Validation::nettoyerString($des);
+
+        /*$dvue=array(
+            'nom'=>$nom,
+            'mdp'=>$mdp,
+        );*/try {
+        $modelist->creerListeTache($nom, 1, 'public', $des);
+    }catch (Exception $e){echo $e->getMessage();}
+            //echo $nom."<br>".$des;
+            //require(Config::$vue['index']);
+
+
+
     }
     static function affichlistePu(ModeleListeTaches $modeleList){
         //$modeleList->creerListeTache('lol',1,'aa','ceci est fait par le front controller');

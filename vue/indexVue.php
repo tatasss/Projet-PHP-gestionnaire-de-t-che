@@ -55,7 +55,7 @@
 	</div>
 	<div class="col-sm-4" >
 	<div class="panel panel-default">
-      		<div class="panel-heading">Liste de tâches   <form method="post" action="index.php?action=ajouterListeTache"> <button type="submit" name="action" id="ajoutertache" type="button" class="btn btn-success">ajouter</button></form></div>
+      		<div class="panel-heading">Liste de tâches   <form method="post" action="index.php?action=ajouterListeTache"> <button type="submit" name="ok" value="ok" class="btn btn-success">ajouter</button></form></div>
       		<div class="panel-body">
                 <ul>
 

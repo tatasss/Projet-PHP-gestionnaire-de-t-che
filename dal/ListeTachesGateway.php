@@ -51,8 +51,15 @@ class ListeTachesGateway
         $this->con->executeQuery('INSERT INTO ListeTaches VALUES (:id,:nom,:is_public,NULL,:description)',
             array(':id'=>array($liste->getId(),PDO::PARAM_INT),
                 ':nom'=>array($liste->getNomListe(),PDO::PARAM_STR),
-                ':id_public'=>array($liste->getisPublic(),PDO::PARAM_INT),
+                ':is_public'=>array($liste->getisPublic(),PDO::PARAM_INT),
                 ':description'=>array($liste->getProprietaire(),PDO::PARAM_STR)));
+    }
+    public function getLastId() : int {
+         $this->con->executeQuery('SELECT LAST_INSERT_ID(id) FROM ListeTaches;',array());
+        $results=$this->con->getResults();
+        foreach ($results as $row)
+            $id_list = $row[0];
+        return $id_list;
     }
 
     public function supprimerListeTache(ListeTaches $liste){

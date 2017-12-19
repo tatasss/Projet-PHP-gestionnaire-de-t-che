@@ -9,9 +9,9 @@ class Config{
     //liste des vue
     static $vue=array('erreur' =>'vue/erreur.php',
                       'index'=>'vue/indexVue.php',
-                      'ajoutache'=>'vue/ajouterTache.php',
+                      'ajoutache'=>'vue/ajouterListeTache.php',
                       'base'=>'index.php',
                       'connection'=>'vue/connection.php');
     static $tab=[];
-    static $id_list=0;
+    static $id_list = 0;
 }

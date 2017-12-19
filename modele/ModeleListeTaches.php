@@ -49,8 +49,11 @@ class ModeleListeTaches
 
     }
     public function creerListeTache($nom,$pub,$proprio,$description){
-        $this->insererTache(new ListeTaches(config::$id_list +1,$nom,$pub,$proprio,$description));
-        Config::$id_list=Config::$id_list+1;
+        //echo $this->liste_gateway->getLastId();
+        $thisId=$this->liste_gateway->getLastId() +1;
+
+        $this->liste_gateway->insererListeTache(new ListeTaches($thisId,$nom,$pub,$proprio,$description));
+
     }
     public function getListeById($id)
     {
