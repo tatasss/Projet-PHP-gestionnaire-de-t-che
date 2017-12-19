@@ -17,6 +17,29 @@ class ListeTaches
         $this->description=$description;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getisPublic()
+    {
+        return $this->is_public;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProprietaire()
+    {
+        return $this->proprietaire;
+    }
 
     public function getNom(){
         return $this->nom_liste;
@@ -37,4 +60,5 @@ class ListeTaches
     {
         return $this->nom_liste;
     }
+
 }

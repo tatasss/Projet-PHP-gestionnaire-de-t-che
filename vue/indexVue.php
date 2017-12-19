@@ -47,12 +47,14 @@
 <div class="container">
  <div class="row">
 	<div class="col-sm-8">
-	  	<h3>Tâche</h3>
-  		<p>ICI IL Y AURA LES TACHES</p>
+	  	<h3>Tâche   <button type="button" class="btn btn-success">ajouter</button></h3>
+
+
+        <?php $this->getValue(new ModeleTache())?>
 	</div>
 	<div class="col-sm-4" >
 	<div class="panel panel-default">
-      		<div class="panel-heading">Liste de tâches</div>
+      		<div class="panel-heading">Liste de tâches   <button type="button" class="btn btn-success">ajouter</button></div>
       		<div class="panel-body">
                 <ul>
 

@@ -31,7 +31,7 @@ class FrontController
     session_start();
 
 
-        $this->getValue($modeleList,$modeleTache);
+        //$this->getValue($modeleList,$modeleTache);
 
 //debut
 
@@ -133,21 +133,33 @@ class FrontController
         print("<form method='post' nom='getliste' id='getliste'>");
         foreach (config::$tab as $row) {
             $i=$row->getId();
-            print ("<button type='submit' class=\"btn btn-primary btn-block\">" . $row->getNom() .
-                "<input type='hidden' id='$i' name='idList' value='$i' A></button> ");
+            print ("<button type='submit'id='$i' name='idList' value='$i' class=\"btn btn-primary btn-block\">" . $row->getNom() .
+                "</button> ");
 
         }
         print("</form>");
 
 
     }
-    function getValue(ModeleListeTaches $modeleList,ModeleTache $modeTache){
+    function getValue(ModeleTache $modeTache){
 
-            $liste=$modeleList->getListeById($_POST['idList']);
-            foreach ($liste as $row) {
-                $tab = $modeTache->tachesDeListe($row);
-                echo($row->getNomTache);
-            }
+
+
+           // (int) $liste=$modeleList->getListeById($_POST['idList']);
+           // foreach ($liste as $row) {
+                $tab = $modeTache->tachesDeListe($_POST['idList']);
+            //    echo($row->getNomTache());
+        foreach ($tab as $row){
+            print('<div class="panel panel-default">');
+            print('<div class="panel-heading">');
+            print $row->getNomTache();
+            print ('</div>');
+            print('<div class="panel-body">');
+            print $row->getDescriptionTache();
+            print('</div>');
+            print('</div>');
+        }
+
     }
 
 

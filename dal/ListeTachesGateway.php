@@ -34,7 +34,9 @@ class ListeTachesGateway
     private function getInstances(array $results){
         $retour=[];
         foreach ($results as $row) {
+
             $retour[] = new ListeTaches($row['id'], $row['nom_liste'],$row['is_public'],$row['proprietaire'],$row['description']);
+
         }
         return $retour;
     }
@@ -46,9 +48,11 @@ class ListeTachesGateway
         return $retour;
     }
     public function insererListeTache(ListeTaches $liste){
-        $this->con->executeQuery('INSERT INTO ListeTaches VALUES (:id,:nom)',
+        $this->con->executeQuery('INSERT INTO ListeTaches VALUES (:id,:nom,:is_public,NULL,:description)',
             array(':id'=>array($liste->getId(),PDO::PARAM_INT),
-                ':nom'=>array($liste->getNomListe(),PDO::PARAM_STR)));
+                ':nom'=>array($liste->getNomListe(),PDO::PARAM_STR),
+                ':id_public'=>array($liste->getisPublic(),PDO::PARAM_INT),
+                ':description'=>array($liste->getProprietaire(),PDO::PARAM_STR)));
     }
 
     public function supprimerListeTache(ListeTaches $liste){

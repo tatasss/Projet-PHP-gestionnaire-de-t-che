@@ -32,8 +32,8 @@ class ModeleTache
         $this->tache_gateway->modifierTache($tache);
     }
 
-    public function tachesDeListe (ListeTaches $listeTaches){
-        $tab=$this->tache_gateway->getTachesDeListe($listeTaches);
+    public function tachesDeListe ($id){
+        $tab=$this->tache_gateway->getTachesDeListe($id);
         return $tab;
     }
 
