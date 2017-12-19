@@ -31,23 +31,13 @@ class TacheGateway
         return $retour;
     }
 
-    public function insererTache(Tache $laTache){
+    public function insererTache($id,$nom,$date_debut,$date_fin,$description){
         $this->con->executeQuery('INSERT INTO Tache VALUES (:id,:nom,:date_debut,:date_fin,:description)',
-      array(':id'=>array($laTache->getId(),PDO::PARAM_INT),
-            ':nom'=>array($laTache->getNomTache(),PDO::PARAM_STR),
-            ':date_debut'=>array($laTache->getDateDebut(),PDO::PARAM_STR),
-            ':date_fin'=>array($laTache->getDateFin(),PDO::PARAM_STR),
-            'description'=>array($laTache->getDescriptionTache(),PDO::PARAM_STR)));
-    }
-
-    public function modifierTache(Tache $laTache){
-        $this->con->executeQuery('UPDATE Tache SET nom = :nom, date_debut =:date_debut, date_fin =:date_fin,description=:description,
-            WHERE id = :id ',
-            array(':id'=>array($laTache->getId(),PDO::PARAM_INT),
-                ':nom'=>array($laTache->getNomTache(),PDO::PARAM_STR),
-                ':date_debut'=>array($laTache->getDateDebut(),PDO::PARAM_STR),
-                ':date_fin'=>array($laTache->getDateFin(),PDO::PARAM_STR),
-                'description'=>array($laTache->getDescriptionTache(),PDO::PARAM_STR)));
+      array(':id'=>array($id,PDO::PARAM_INT),
+            ':nom'=>array($nom->getNomTache(),PDO::PARAM_STR),
+            ':date_debut'=>array($date_debut->getDateDebut(),PDO::PARAM_STR),
+            ':date_fin'=>array($date_fin,PDO::PARAM_STR),
+            'description'=>array($description,PDO::PARAM_STR)));
     }
 
     public function supprimerTache ($nom){
@@ -58,7 +48,7 @@ class TacheGateway
     private function creerTache (array $results){
         $retour=[];
         foreach ($results as $row){
-            $retour[]=new Tache($row['id'],$row['nom_tache'],$row['date_debut'],$row['date_fin'],$row['description_tache']);
+            $retour[]=new Tache($row['id'],$row['nom_tache'],$row['date_debut'],$row['date_fin'],$row['description_tache'],$row['id_liste'],$row['proprietaire']);
         }
     }
     public function rechercheLigne ($nom)
