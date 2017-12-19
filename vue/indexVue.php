@@ -56,7 +56,7 @@
       		<div class="panel-body">
                 <ul>
 
-                <?php FrontController::affichlistePu(new ModeleListeTaches())?>
+                <?php $this->affichlistePu(new ModeleListeTaches(),new ModeleTache())?>
                 </ul>
             </div>
     	</div>

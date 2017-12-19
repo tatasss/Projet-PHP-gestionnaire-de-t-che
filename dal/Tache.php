@@ -47,6 +47,7 @@ class Tache
     /**
      * @return mixed
      */
+
     public function getNomTache()
     {
         return $this->nom_tache;

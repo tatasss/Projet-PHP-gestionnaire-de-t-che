@@ -23,13 +23,15 @@ class FrontController
     global $connecte;
     global $notreUsegt;
     global $modeleList;
+    global $modeleTache;
     $modeleList=new ModeleListeTaches();
     $notreUsegt=new ModeleUtilisateur();
+    $modeleTache=new ModeleTache();
 
     session_start();
 
 
-
+        $this->getValue($modeleList,$modeleTache);
 
 //debut
 
@@ -124,14 +126,28 @@ class FrontController
     /**
      * @param $modeleList
      */
-    static function affichlistePu(ModeleListeTaches $modeleList){
+    function affichlistePu(ModeleListeTaches $modeleList){
         //$modeleList->creerListeTache('lol',1,'aa','ceci est fait par le front controller');
         config::$tab=$modeleList->getListePublic();
         $i=0;
+        print("<form method='post' nom='getliste' id='getliste'>");
+        foreach (config::$tab as $row) {
+            $i=$row->getId();
+            print ("<button type='submit' class=\"btn btn-primary btn-block\">" . $row->getNom() .
+                "<input type='hidden' id='$i' name='idList' value='$i' A></button> ");
 
-        foreach (config::$tab as $row)
-            print ("<button type=\"button\" class=\"btn btn-primary btn-block\">".$row->getNom()."</button> ");
+        }
+        print("</form>");
 
+
+    }
+    function getValue(ModeleListeTaches $modeleList,ModeleTache $modeTache){
+
+            $liste=$modeleList->getListeById($_POST['idList']);
+            foreach ($liste as $row) {
+                $tab = $modeTache->tachesDeListe($row);
+                echo($row->getNomTache);
+            }
     }
 
 

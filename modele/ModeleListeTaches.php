@@ -51,4 +51,9 @@ class ModeleListeTaches
     public function creerListeTache($nom,$pub,$proprio,$description){
         $this->insererTache(new ListeTaches($this->liste_gateway->getMaxIndex() +1,$nom,$pub,$proprio,$description));
     }
+    public function getListeById($id)
+    {
+        return $this->liste_gateway->getListeId($id);
+
+    }
 }

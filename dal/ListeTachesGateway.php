@@ -68,6 +68,13 @@ class ListeTachesGateway
         return $this->getInstancesPU($results);
 
     }
+    public function getListeId($id){
+        $this->con->executeQuery('SELECT * FROM ListeTaches WHERE id= :id ',
+            array(':id'=>array($id,PDO::PARAM_INT)));
+        $results=$this->con->getResults();
+        return $this->getInstancesPU($results);
+
+    }
     /*public function getMaxIndex(){
         $this->con->executeQuery('SELECT MAX(id) FROM ListeTaches',
             array());
