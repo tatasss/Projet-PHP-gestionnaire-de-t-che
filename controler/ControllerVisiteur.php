@@ -2,11 +2,11 @@
 /**
  * Created by PhpStorm.
  * User: argiraud
- * Date: 02/12/2017
- * Time: 10:58
+ * Date: 19/12/2017
+ * Time: 09:24
  */
 
-class ControllerUser
+class ControllerVisiteur
 {
     public function __construct($action)
     {
@@ -19,24 +19,16 @@ class ControllerUser
 
             switch($action) {
 
-                case "supprimerListeTachesPrivee":
-                    $this->supprimerListeTachesPrivee($dVueErreur);
+                case "ajouterListeTachesPublic":
+                    $this->ajouterListesTachePublic($dVueErreur);
                     break;
 
-                case "ajouterListeTachesPrivee":
-                    $this->ajouterListeTachesPrivee($dVueErreur);
+                case "ajouterTachePublic":
+                    $this->ajouterTachePublic($dVueErreur);
                     break;
 
-                case "supprimerTachePrivee":
-                    $this->supprimerTachePrivee($dVueErreur);
-                    break;
-
-                case "ajouterTachePrivee":
-                    $this->ajouterTachePrivee($dVueErreur);
-                    break;
-
-                case "afficherTachePrivee":
-                    $this->afficherTachePrivee($dVueErreur);
+                case "afficherTachePublic":
+                    $this->afficherTachePublic($dVueErreur);
                     break;
 
                 default:
@@ -63,10 +55,10 @@ class ControllerUser
     }
 
 
-    function afficherTachePrivee(array $dVueErreur) {
+    function afficherTachePublic(array $dVueErreur) {
 
         $model = new ModeleListeTaches();
-        $data=$model->getByProprio($_SESSION['nom']);
+        $data=$model->getListePublic();
 
         $dVue = array (
             'liste' => $data
@@ -74,7 +66,7 @@ class ControllerUser
         require (config::$vue['mesTaches']);
     }
 
-    function ajouterListeTachesPrivee(array $dVueErreur) {
+    function ajouterListesTachePublic(array $dVueErreur) {
         $nom=$_POST['nomListe'];
         $description=$_POST['description'];
 
@@ -85,21 +77,11 @@ class ControllerUser
 
         $model->creerListeTache($nom,0,$_SESSION['nom'],$description);
 
-        $this->afficherTachePrivee($dVueErreur);
+        $this->afficherTachePublic($dVueErreur);
     }
 
-    function supprimerListeTachesPrivee(array $dVueEreur) {
 
-
-
-        $model = new ModeleListeTaches();
-
-        $model->supprimerTache($liste);
-
-        $this->afficherTachePrivee($dVueEreur);
-    }
-
-    function ajouterTachePrivee(array $dVueErreur) {
+    function ajouterTachePublic(array $dVueErreur) {
         $nom=$_POST['nom'];
         $description=$_POST['description'];
         $date_debut=$_POST['date_debut'];
@@ -114,16 +96,7 @@ class ControllerUser
 
         $model->insererTache(,$nom,$date_debut,$date_fin,$description);
 
-        $this->afficherTachePrivee($dVueErreur);
-    }
-
-    function supprimerTachePrivee(array $dVueErreur) {
-
-        $model = new ModeleTache();
-
-        $model->supprimerTache($nom);
-
-        $this->afficherTachePrivee($dVueErreur);
+        $this->afficherTachePublic($dVueErreur);
     }
 
 }
