@@ -59,22 +59,24 @@ class TacheGateway
     }
 
     public function supprimerTache ($nom){
-        $this->con->executeQuery('DELETE FROM Tache WHERE nom = :nom',
+        $this->con->executeQuery('DELETE FROM Tache WHERE nom_tache = :nom',
             array(':nom'=>array($nom,PDO::PARAM_STR)));
+        echo $nom;
     }
 
-    private function creerTache (array $results){
-        $retour=[];
+    private function creerTache (array $results):Tache{
+
         foreach ($results as $row){
-            $retour[]=new Tache($row['id'],$row['nom_tache'],$row['date_debut'],$row['date_fin'],$row['description_tache']);
+            $retour=new Tache($row['id'],$row['nom_tache'],$row['date_debut'],$row['date_fin'],$row['description_tache'],$row['id_liste'],$row['proprietaire']);
         }
+        return $retour;
     }
-    public function rechercheLigne ($nom)
+    public function rechercheLigne ($nom) :Tache
     {
         $query='SELECT * FROM Tache WHERE nomTache=:nom';
         $this->con->executeQuery($query,array(':nom'=>array($nom,PDO::PARAM_STR)));
         $results=$this->con->getResults();
-        return $this->creerTache(array ($results));
+        return $this->creerTache($results);
     }
 
     public function afficherTable ()
@@ -84,5 +86,8 @@ class TacheGateway
         return $this->con->getResults();
         
     }
+   /* public function getTacheByBName($nom){
+        $this->con->executeQuery('SELECT * Fro')
+    }*/
 
 }

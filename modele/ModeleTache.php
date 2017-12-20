@@ -25,10 +25,15 @@ class ModeleTache
         $this->tache_gateway->insererTache($tache,$id);
     }
 
-    public function supprimerTache(Tache $tache){
-        $this->tache_gateway->supprimerTache($tache);
-    }
+    public function supprimerTache($nom)
+    {
+        try {
+            $this->tache_gateway->supprimerTache($nom);
 
+        }catch (Exception $e){
+            echo $e->getMessage();
+    }
+}
     public function modifierTache(Tache $tache){
         $this->tache_gateway->modifierTache($tache);
     }
@@ -36,6 +41,9 @@ class ModeleTache
     public function tachesDeListe ($id){
         $tab=$this->tache_gateway->getTachesDeListe($id);
         return $tab;
+    }
+    public function selectedTache($nom){
+        return $this->tache_gateway->rechercheLigne($nom);
     }
 
 }

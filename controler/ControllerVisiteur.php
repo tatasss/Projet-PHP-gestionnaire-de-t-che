@@ -35,11 +35,9 @@ class ControllerVisiteur
                 case "verifTache":
                     $this->ajouterTachePublic($dVueErreur);
                     break;
-
-                case "afficherTachePublic":
-
+                case "SupprimerTache":
+                    $this->suppTache(new ModeleTache());
                     break;
-
                 default:
                     $dVueErreur[] =	"Erreur d'appel php";
                     require (config::$vue['index']);
@@ -107,6 +105,22 @@ class ControllerVisiteur
 
 
     }
+    function suppTache(ModeleTache $modeTache){
+
+        $Tache =$_POST['ok'];
+        $Tache=Validation::nettoyerString($Tache);
+        try {
+            $modeTache->supprimerTache($Tache);
+        }
+        catch (Exception $e){
+            $e->getMessage();
+        }
+        require(Config::$vue['index']);
+    }
+    /* ICI LES METHODES DE LA VUES*/
+    /**
+     * @param ModeleListeTaches $modeleList
+     */
     static function affichlistePu(ModeleListeTaches $modeleList){
         //$modeleList->creerListeTache('lol',1,'aa','ceci est fait par le front controller');
         config::$tab=$modeleList->getListePublic();
@@ -134,7 +148,11 @@ class ControllerVisiteur
         foreach ($tab as $row){
             print('<div class="panel panel-default">');
             print('<div class="panel-heading">');
+            print('<div class="row"><div class="col-sm-8">');
             print $row->getNomTache();
+            $nom=$row->getNomTache();
+            print("</div><div class='col-sm-2'></div><div class='col-sm-2'><form method='post' action='index.php?action=SupprimerTache'><button type='submit' id='$nom' name='ok' value='$nom' class='btn btn-danger'>Supprimer</button></form></div> </div>");
+            /*print('</div><div class="col-sm-2"></div><div class="col-sm-2"><form method="post" action="index.php?action=SupprimerTache"><button type="submit" name="ok" value="<?= $row->getId()?>"class="btn btn-danger">Supprimer</button></form></div> </div>');*/
             print ('</div>');
             print('<div class="panel-body">');
             print $row->getDescriptionTache();

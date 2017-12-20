@@ -68,8 +68,9 @@ class FrontController
                     break;
                 case "verifCo":new ControllerUser($action);
                     break;
-                case "ajoutertache":
-                    $this->ajoutache();
+
+                case "SupprimerTache":
+                    new ControllerVisiteur($action);
                     break;
                 default:
                     $dVueEreur[] =	"Erreur d'appel php";
