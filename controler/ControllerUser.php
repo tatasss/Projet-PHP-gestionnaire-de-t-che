@@ -45,7 +45,8 @@ class ControllerUser
                             require config::$vue['index'];
 
                         }
-                   exit(0);
+                        Config::$connecte=$_SESSION['connecte'];
+                   break;
                 case "supprimerListeTachesPrivee":
 
                     break;
@@ -86,7 +87,7 @@ class ControllerUser
 
 
 
-        exit(0);
+        //exit(0);
     }
 
 

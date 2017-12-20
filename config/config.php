@@ -7,11 +7,13 @@ class Config{
     static $login ="matthias";
     static $mdp = "judoka43";
     //liste des vue
+    static $connecte;
     static $vue=array('erreur' =>'vue/erreur.php',
                       'index'=>'vue/indexVue.php',
-                      'ajoutache'=>'vue/ajouterListeTache.php',
+                      'ajoutListeTache'=>'vue/ajouterListeTache.php',
                       'base'=>'index.php',
-                      'connection'=>'vue/connection.php');
+                      'connection'=>'vue/connection.php',
+                      'ajoutache'=>'vue/ajoutTache.php');
     static $tab=[];
     static $id_list = 0;
 }

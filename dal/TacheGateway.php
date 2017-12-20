@@ -31,14 +31,21 @@ class TacheGateway
         }
         return $retour;
     }
-
-    public function insererTache(Tache $laTache){
-        $this->con->executeQuery('INSERT INTO Tache VALUES (:id,:nom,:date_debut,:date_fin,:description)',
-      array(':id'=>array($laTache->getId(),PDO::PARAM_INT),
+    public function getLastId() : int {
+        $this->con->executeQuery('SELECT MAX(id) FROM Tache;',array());
+        $results=$this->con->getResults();
+        foreach ($results as $row)
+            $id = $row[0];
+        return $id;
+    }
+    public function insererTache(Tache $laTache,$id){
+        $this->con->executeQuery('INSERT INTO Tache(id,nom_tache,date_debut,date_fin,description_tache,id_liste) VALUES (:id,:nom,:date_debut,:date_fin,:description,:idListe)',
+      array(':id'=>array($id,PDO::PARAM_INT),
             ':nom'=>array($laTache->getNomTache(),PDO::PARAM_STR),
             ':date_debut'=>array($laTache->getDateDebut(),PDO::PARAM_STR),
             ':date_fin'=>array($laTache->getDateFin(),PDO::PARAM_STR),
-            'description'=>array($laTache->getDescriptionTache(),PDO::PARAM_STR)));
+            'description'=>array($laTache->getDescriptionTache(),PDO::PARAM_STR),
+            'idListe'=>array($laTache->getListeId(),PDO::PARAM_INT)));
     }
 
     public function modifierTache(Tache $laTache){

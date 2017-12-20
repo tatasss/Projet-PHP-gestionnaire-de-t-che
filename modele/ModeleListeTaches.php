@@ -48,6 +48,9 @@ class ModeleListeTaches
         return $this->liste_gateway->getListe(1);
 
     }
+    public function getID($nom): int{
+        return $this->liste_gateway->getId($nom);
+    }
     public function creerListeTache($nom,$pub,$proprio,$description){
         //echo $this->liste_gateway->getLastId();
         $thisId=$this->liste_gateway->getLastId() +1;

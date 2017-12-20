@@ -21,7 +21,8 @@ class ModeleTache
     }
 
     public function insererTache(Tache $tache){
-        $this->tache_gateway->insererTache($tache);
+        $id=$this->tache_gateway->getLastId()+1;
+        $this->tache_gateway->insererTache($tache,$id);
     }
 
     public function supprimerTache(Tache $tache){

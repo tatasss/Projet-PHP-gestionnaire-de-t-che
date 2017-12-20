@@ -39,8 +39,8 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <!--<li><a href="vue/inscription.php"><span class="glyphicon glyphicon-user"></span> S'inscrire</a></li>-->
-            <?php if($_SESSION['connecte']=0)?><li><a href="index.php?action=connection" ><span class="glyphicon glyphicon-log-in"></span> Se connecter</a></li>
-
+            <?php if($_SESSION['connecte']==0)print("<li><a href=\"index.php?action=connection\" ><span class=\"glyphicon glyphicon-log-in\"></span> Se connecter</a></li>");?>
+            <?php if($_SESSION['connecte']==1)print("<li><a href=\"index.php?action=deconnection\" ><span class=\"glyphicon glyphicon-log-out\"></span> Se deconnecter</a></li>");?>
         </ul>
     </div>
 </nav>
@@ -48,15 +48,22 @@
 <div class="container">
  <div class="row">
 	<div class="col-sm-8">
-	  	<h3>Tâche   <button type="button" class="btn btn-success">ajouter</button></h3>
+        <div class="row">
+            <div class="col-sm-8"><h3>Tâche</h3></div>
+            <div class="col-sm-4">
+                <h3> <form method="post" action="index.php?action=ajouterTache"><button type="submit" name="ok" value="ok" class="btn btn-success">ajouter</button></form></h3>
 
-
+            </div>
+        </div>
         <?php ControllerVisiteur::getValue(new ModeleTache())?>
 	</div>
 	<div class="col-sm-4" >
 	<div class="panel panel-default">
-      		<div class="panel-heading">Liste de tâches   <form method="post" action="index.php?action=ajouterListeTache"> <button type="submit" name="ok" value="ok" class="btn btn-success">ajouter</button></form></div>
-      		<div class="panel-body">
+      		<div class="panel-heading"><div class="row">
+                    <div class="col-sm-8"> Liste de tâches  </div>
+                    <div class="col-sm-4"> <form method="post" action="index.php?action=ajouterListeTache"> <button type="submit" name="ok" value="ok" class="btn btn-success">ajouter</button></form></div></div>
+            </div>
+                <div class="panel-body">
                 <ul>
 
                 <?php ControllerVisiteur::affichlistePu(new ModeleListeTaches(),new ModeleTache())?>

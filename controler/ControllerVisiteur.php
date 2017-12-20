@@ -20,24 +20,24 @@ class ControllerVisiteur
             switch($action) {
                 case "index":
                     $this->getIndex();
-                    breack;
+                    break;
                 case "ajouterListeTache":
-                    require(Config::$vue['ajoutache']);
+                    require(Config::$vue['ajoutListeTache']);
                     break;
                 case "verifListe":
                     $this->valideFormListe(new ModeleListeTaches());
                     require (Config::$vue['index']);
                     break;
-                case "ajouterListeTachesPublic":
-                    $this->ajouterListesTachePublic($dVueErreur);
+                case "ajouterTache":
+                    require(Config::$vue['ajoutache']);
                     break;
 
-                case "ajouterTachePublic":
+                case "verifTache":
                     $this->ajouterTachePublic($dVueErreur);
                     break;
 
                 case "afficherTachePublic":
-                    $this->afficherTachePublic($dVueErreur);
+
                     break;
 
                 default:
@@ -66,48 +66,25 @@ class ControllerVisiteur
         require (config::$vue['index']);
     }
 
-    function afficherTachePublic(array $dVueErreur) {
-
-        $model = new ModeleListeTaches();
-        $data=$model->getListePublic();
-
-        $dVue = array (
-            'liste' => $data
-        );
-        require (config::$vue['mesTaches']);
-    }
-
-    function ajouterListesTachePublic(array $dVueErreur) {
-        $nom=$_POST['nomListe'];
-        $description=$_POST['description'];
-
-        $nom=Validation::nettoyerString($nom);
-        $description=Validation::nettoyerString($description);
-
-        $model = new ModeleListeTaches();
-
-        $model->creerListeTache($nom,0,$_SESSION['nom'],$description);
-
-        $this->afficherTachePublic($dVueErreur);
-    }
 
 
     function ajouterTachePublic(array $dVueErreur) {
-        $nom=$_POST['nom'];
-        $description=$_POST['description'];
-        $date_debut=$_POST['date_debut'];
-        $date_fin=$_POST['date_fin'];
-
+        $nom=$_POST['donNomTache'];
+        $description=$_POST['donDescriptionTa'];
+        $nomL=$_POST['maliste'];
+        $modeleList=new ModeleListeTaches();
+        $IdList=$modeleList->getID($nomL);
         $nom=Validation::nettoyerString($nom);
         $description=Validation::nettoyerString($description);
-        $date_debut=Validation::nettoyerString($date_debut);
-        $date_fin=Validation::nettoyerString($date_fin);
-
+        $nomL=Validation::nettoyerString($nomL);
         $model = new ModeleTache();
-
-        $model->insererTache(config::$id_list+1,$nom,$date_debut,$date_fin,$description);
-
-        $this->afficherTachePublic($dVueErreur);
+        try {
+            $model->insererTache(new Tache(1, $nom, null, null, $description, $IdList, 'public'));
+        }catch (Exception $e){
+            echo $e->getMessage();
+        }
+        require(Config::$vue['index']);
+     //   $this->afficherTachePublic($dVueErreur);
     }
     function valideFormListe(ModeleListeTaches $modelist)
     {
@@ -166,5 +143,20 @@ class ControllerVisiteur
         }
 
     }
+    static function selectListPu(){
+        //$modeleList->creerListeTache('lol',1,'aa','ceci est fait par le front controller');
+        $modeleList=new ModeleListeTaches();
+        config::$tab=$modeleList->getListePublic();
+        $i=0;
+        //print("<form method='post' action='index.php' name='getliste' id='getliste'>");
+        foreach (config::$tab as $row) {
+            $i=$row->getId();
+            print ("<option>" . $row->getNom() .
+                "</option> ");
 
+        }
+        //print("</form>");
+
+
+    }
 }

@@ -52,7 +52,7 @@ class ListeTachesGateway
             array(':id'=>array($liste->getId(),PDO::PARAM_INT),
                 ':nom'=>array($liste->getNomListe(),PDO::PARAM_STR),
                 ':is_public'=>array($liste->getisPublic(),PDO::PARAM_INT),
-                ':description'=>array($liste->getProprietaire(),PDO::PARAM_STR)));
+                ':description'=>array($liste->getDescription(),PDO::PARAM_STR)));
     }
     public function getLastId() : int {
          $this->con->executeQuery('SELECT LAST_INSERT_ID(id) FROM ListeTaches;',array());
@@ -61,7 +61,13 @@ class ListeTachesGateway
             $id_list = $row[0];
         return $id_list;
     }
-
+    public function  getId($nom):int{
+        $this->con->executeQuery('SELECT id FROM ListeTaches WHERE nom_liste=:liste',array(':liste'=>array($nom,PDO::PARAM_STR)));
+        $results=$this->con->getResults();
+        foreach ($results as $row)
+            $id_list = $row[0];
+        return $id_list;
+    }
     public function supprimerListeTache(ListeTaches $liste){
         $this->con->executeQuery('DELETE FROM Tache WHERE id = :id ',
             array(':id'=>array($liste->getId(),PDO::PARAM_INT)));

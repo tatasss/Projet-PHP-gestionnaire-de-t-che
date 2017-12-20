@@ -32,11 +32,9 @@ class FrontController
     $notreUsegt=new ModeleUtilisateur();
     $modeleTache=new ModeleTache();
 
-    session_start();
-
-
+    if(!isset(Config::$connecte))Config::$connecte=0;
         //$this->getValue($modeleList,$modeleTache);
-
+    $_SESSION['connecte']=Config::$connecte;
 //debut
 
 //on initialise un tableau d'erreur
@@ -61,6 +59,12 @@ class FrontController
                     break;
                 case "connection":
                     new ControllerUser($action);
+                    break;
+                case "ajouterTache":
+                    new ControllerVisiteur($action);
+                    break;
+                case "verifTache":
+                    new ControllerVisiteur($action);
                     break;
                 case "verifCo":new ControllerUser($action);
                     break;
