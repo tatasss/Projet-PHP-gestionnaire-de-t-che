@@ -1,7 +1,7 @@
 <?php
-class autoload
+class Autoload
 {
-	private static $_instance= null;
+	/*private static $_instance= null;
 	public static function charger(){
 		if(null!=self::$_instance){
 			throw new Exception(sprintf('%s is already started',__CLASS__));}
@@ -19,5 +19,6 @@ class autoload
 				include $file;
 			}
 		}
-	}
+	}*/
+	die("lkljgdtf");
 }
