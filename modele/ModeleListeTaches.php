@@ -63,4 +63,8 @@ class ModeleListeTaches
         return $this->liste_gateway->getListeId($id);
 
     }
+    public function supprimerListe($nom){
+        $this->liste_gateway->supprimerListeTache($nom);
+    }
+
 }

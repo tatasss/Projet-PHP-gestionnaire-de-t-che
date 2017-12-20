@@ -68,9 +68,13 @@ class ListeTachesGateway
             $id_list = $row[0];
         return $id_list;
     }
-    public function supprimerListeTache(ListeTaches $liste){
-        $this->con->executeQuery('DELETE FROM Tache WHERE id = :id ',
-            array(':id'=>array($liste->getId(),PDO::PARAM_INT)));
+    public function supprimerListeTache($liste){
+
+        $idListe=$this->getId($liste);
+        $this->con->executeQuery('DELETE FROM Tache WHERE id_liste = :id ',
+            array(':id'=>array($idListe,PDO::PARAM_INT)));
+        $this->con->executeQuery('DELETE FROM ListeTaches WHERE id=:id',
+            array(':id'=>array($idListe,PDO::PARAM_INT)));
     }
 
     public function tachesDeListe (ListeTaches $liste){

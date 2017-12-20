@@ -38,6 +38,8 @@ class ControllerVisiteur
                 case "SupprimerTache":
                     $this->suppTache(new ModeleTache());
                     break;
+                case "SupprimerListe":
+                    $this->suppListe(new ModeleListeTaches());
                 default:
                     $dVueErreur[] =	"Erreur d'appel php";
                     require (config::$vue['index']);
@@ -117,6 +119,16 @@ class ControllerVisiteur
         }
         require(Config::$vue['index']);
     }
+    function suppListe(ModeleListeTaches $modeList){
+        $liste =$_POST['ok'];
+        $liste=Validation::nettoyerString($liste);
+        try{
+            $modeList->supprimerListe($liste);
+        }
+        catch(Exception $e){
+            echo $e->getMessage();
+        }
+    }
     /* ICI LES METHODES DE LA VUES*/
     /**
      * @param ModeleListeTaches $modeleList
@@ -124,15 +136,24 @@ class ControllerVisiteur
     static function affichlistePu(ModeleListeTaches $modeleList){
         //$modeleList->creerListeTache('lol',1,'aa','ceci est fait par le front controller');
         config::$tab=$modeleList->getListePublic();
-        $i=0;
-        print("<form method='post' action='index.php' name='getliste' id='getliste'>");
+        //$i=0;
+
+
         foreach (config::$tab as $row) {
             $i=$row->getId();
-            print ("<button type='checkbox'id='$i' name='idList' value='$i' class=\"btn btn-primary btn-block\">" . $row->getNom() .
+            $nom=$row->getNom();
+            print("<div class='col-sm-8'>");
+            print("<form method='post' action='index.php' name='getliste' id='getliste'>");
+            print ("<button type='submit' id='$i' name='idList' value='$i' class=\"btn btn-primary btn-block\">" . $row->getNom() .
                 "</button> ");
+            print("</form>");
+            print("</div>");
+            print("<div class='col-sm-4'>");
+            print("<form method='post' action='index.php?action=SupprimerListe'>");
+            print("<button type='submit' id='$nom' name='ok' value='$nom' class='btn btn-danger'>supprimer</button></form> </div>");
 
         }
-        print("</form>");
+
 
 
     }

@@ -72,6 +72,9 @@ class FrontController
                 case "SupprimerTache":
                     new ControllerVisiteur($action);
                     break;
+                case "SupprimerListe":
+                    new ControllerVisiteur($action);
+                    break;
                 default:
                     $dVueEreur[] =	"Erreur d'appel php";
                     require (config::$vue['index']);

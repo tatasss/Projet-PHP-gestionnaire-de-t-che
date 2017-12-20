@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccf37a1e-d72e-4240-9e86-d5676685aa04" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/controler/ControllerVisiteur.php" afterPath="$PROJECT_DIR$/controler/ControllerVisiteur.php" />
       <change beforePath="$PROJECT_DIR$/controler/FrontController.php" afterPath="$PROJECT_DIR$/controler/FrontController.php" />
-      <change beforePath="$PROJECT_DIR$/dal/TacheGateway.php" afterPath="$PROJECT_DIR$/dal/TacheGateway.php" />
-      <change beforePath="$PROJECT_DIR$/modele/ModeleTache.php" afterPath="$PROJECT_DIR$/modele/ModeleTache.php" />
-      <change beforePath="$PROJECT_DIR$/vue/indexVue.php" afterPath="$PROJECT_DIR$/vue/indexVue.php" />
+      <change beforePath="$PROJECT_DIR$/dal/ListeTachesGateway.php" afterPath="$PROJECT_DIR$/dal/ListeTachesGateway.php" />
+      <change beforePath="$PROJECT_DIR$/modele/ModeleListeTaches.php" afterPath="$PROJECT_DIR$/modele/ModeleListeTaches.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,20 +31,22 @@
       <file leaf-file-name="FrontController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controler/FrontController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10">
-              <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="38" />
+            <state relative-caret-position="640">
+              <caret line="76" column="26" lean-forward="false" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerVisiteur.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ControllerVisiteur.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controler/ControllerVisiteur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-360">
-              <caret line="116" column="9" lean-forward="true" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
+            <state relative-caret-position="280">
+              <caret line="148" column="29" lean-forward="false" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
               <folding>
-                <marker date="1513756905611" expanded="true" signature="5723:5770" ph="..." />
+                <marker date="1513760457211" expanded="true" signature="4106:4242" ph="..." />
+                <marker date="1513760457211" expanded="true" signature="4127:4242" ph="..." />
+                <marker date="1513760457211" expanded="true" signature="6490:6537" ph="..." />
               </folding>
             </state>
           </provider>
@@ -55,8 +55,8 @@
       <file leaf-file-name="ModeleListeTaches.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modele/ModeleListeTaches.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+            <state relative-caret-position="406">
+              <caret line="66" column="56" lean-forward="false" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -65,7 +65,7 @@
       <file leaf-file-name="ModeleTache.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modele/ModeleTache.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="504">
               <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
               <folding />
             </state>
@@ -82,23 +82,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ListeTaches.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dal/ListeTaches.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="63" column="1" lean-forward="false" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ListeTachesGateway.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dal/ListeTachesGateway.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="72" column="23" lean-forward="false" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
+            <state relative-caret-position="316">
+              <caret line="75" column="66" lean-forward="false" selection-start-line="75" selection-start-column="66" selection-end-line="75" selection-end-column="66" />
               <folding>
-                <marker date="1513727300399" expanded="true" signature="281:321" ph="SELECT * FRO... LISTETACHES" />
-                <marker date="1513727300399" expanded="true" signature="574:632" ph="SELECT * FRO... LISTETACHES" />
-                <marker date="1513727300399" expanded="true" signature="1480:1550" ph="INSERT INTO LISTETACHES... " />
-                <marker date="1513727300399" expanded="true" signature="1924:1966" ph="SELECT LAST_... ListeTaches" />
-                <marker date="1513727300399" expanded="true" signature="2192:2241" ph="SELECT id FR... ListeTaches" />
-                <marker date="1513727300399" expanded="true" signature="2525:2557" ph="DELETE FROM Tache... " />
-                <marker date="1513727300399" expanded="true" signature="2894:2926" ph="SELECT * fro... Tache" />
-                <marker date="1513727300399" expanded="true" signature="2894:2946" ph="SELECT * FRO... ListeTaches" />
-                <marker date="1513727300399" expanded="true" signature="2907:2926" ph="DELETE FROM Tache... " />
-                <marker date="1513727300399" expanded="true" signature="3185:3224" ph="SELECT * FRO... ListeTaches" />
-                <marker date="1513727300399" expanded="true" signature="3451:3482" ph="SELECT MAX(i... ListeTaches" />
+                <marker date="1513759180643" expanded="true" signature="281:321" ph="SELECT * FRO... LISTETACHES" />
+                <marker date="1513759180643" expanded="true" signature="574:632" ph="SELECT * FRO... LISTETACHES" />
+                <marker date="1513759180643" expanded="true" signature="1480:1550" ph="INSERT INTO LISTETACHES... " />
+                <marker date="1513759180643" expanded="true" signature="1924:1966" ph="SELECT LAST_... ListeTaches" />
+                <marker date="1513759180643" expanded="true" signature="2192:2241" ph="SELECT id FR... ListeTaches" />
+                <marker date="1513759180643" expanded="true" signature="2553:2591" ph="DELETE FROM Tache... " />
+                <marker date="1513759180643" expanded="true" signature="2688:2724" ph="DELETE FROM ListeTaches... " />
+                <marker date="1513759180643" expanded="true" signature="3053:3085" ph="SELECT * fro... Tache" />
+                <marker date="1513759180643" expanded="true" signature="3053:3105" ph="SELECT * FRO... ListeTaches" />
+                <marker date="1513759180643" expanded="true" signature="3066:3085" ph="DELETE FROM Tache... " />
+                <marker date="1513759180643" expanded="true" signature="3344:3383" ph="SELECT * FRO... ListeTaches" />
+                <marker date="1513759180643" expanded="true" signature="3610:3641" ph="SELECT MAX(i... ListeTaches" />
               </folding>
             </state>
           </provider>
@@ -124,20 +135,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControllerUser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controler/ControllerUser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding>
-                <marker date="1513723219609" expanded="true" signature="1096:1277" ph="..." />
-                <marker date="1513723219609" expanded="true" signature="1096:1280" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TacheGateway.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TacheGateway.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dal/TacheGateway.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -189,14 +187,14 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/controler/ControllerUser.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
-        <option value="$PROJECT_DIR$/dal/ListeTachesGateway.php" />
-        <option value="$PROJECT_DIR$/modele/ModeleListeTaches.php" />
         <option value="$PROJECT_DIR$/vue/ajoutTache.php" />
-        <option value="$PROJECT_DIR$/controler/FrontController.php" />
         <option value="$PROJECT_DIR$/vue/indexVue.php" />
-        <option value="$PROJECT_DIR$/controler/ControllerVisiteur.php" />
         <option value="$PROJECT_DIR$/modele/ModeleTache.php" />
         <option value="$PROJECT_DIR$/dal/TacheGateway.php" />
+        <option value="$PROJECT_DIR$/controler/FrontController.php" />
+        <option value="$PROJECT_DIR$/modele/ModeleListeTaches.php" />
+        <option value="$PROJECT_DIR$/dal/ListeTachesGateway.php" />
+        <option value="$PROJECT_DIR$/controler/ControllerVisiteur.php" />
       </list>
     </option>
   </component>
@@ -342,12 +340,12 @@
       <workItem from="1513678809593" duration="1029000" />
       <workItem from="1513694093315" duration="12640000" />
       <workItem from="1513715223361" duration="14519000" />
-      <workItem from="1513753481290" duration="3994000" />
+      <workItem from="1513753481290" duration="6977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94659000" />
+    <option name="totallyTimeSpent" value="97642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="75" y="16" width="1303" height="780" extended-state="6" />
@@ -631,26 +629,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dal/ListeTaches.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="63" column="1" lean-forward="false" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dal/Tache.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/ModeleListeTaches.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="53" column="31" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -682,56 +664,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dal/ListeTachesGateway.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="72" column="23" lean-forward="false" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
-          <folding>
-            <marker date="1513727300399" expanded="true" signature="281:321" ph="SELECT * FRO... LISTETACHES" />
-            <marker date="1513727300399" expanded="true" signature="574:632" ph="SELECT * FRO... LISTETACHES" />
-            <marker date="1513727300399" expanded="true" signature="1480:1550" ph="INSERT INTO LISTETACHES... " />
-            <marker date="1513727300399" expanded="true" signature="1924:1966" ph="SELECT LAST_... ListeTaches" />
-            <marker date="1513727300399" expanded="true" signature="2192:2241" ph="SELECT id FR... ListeTaches" />
-            <marker date="1513727300399" expanded="true" signature="2525:2557" ph="DELETE FROM Tache... " />
-            <marker date="1513727300399" expanded="true" signature="2894:2926" ph="SELECT * fro... Tache" />
-            <marker date="1513727300399" expanded="true" signature="2894:2946" ph="SELECT * FRO... ListeTaches" />
-            <marker date="1513727300399" expanded="true" signature="2907:2926" ph="DELETE FROM Tache... " />
-            <marker date="1513727300399" expanded="true" signature="3185:3224" ph="SELECT * FRO... ListeTaches" />
-            <marker date="1513727300399" expanded="true" signature="3451:3482" ph="SELECT MAX(i... ListeTaches" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controler/docVide.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controler/FrontController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controler/ControllerVisiteur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="116" column="9" lean-forward="true" selection-start-line="116" selection-start-column="9" selection-end-line="116" selection-end-column="9" />
-          <folding>
-            <marker date="1513756905611" expanded="true" signature="5723:5770" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/ModeleTache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -748,6 +684,71 @@
             <marker date="1513757472455" expanded="true" signature="2517:2557" ph="DELETE FROM Tache... " />
             <marker date="1513757472455" expanded="true" signature="3007:3046" ph="SELECT * FRO... Tache" />
             <marker date="1513757472455" expanded="true" signature="3288:3307" ph="SELECT * FRO... Tache" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/ModeleTache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/ListeTaches.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="63" column="1" lean-forward="false" selection-start-line="63" selection-start-column="1" selection-end-line="63" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/ModeleListeTaches.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="66" column="56" lean-forward="false" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controler/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="76" column="26" lean-forward="false" selection-start-line="76" selection-start-column="26" selection-end-line="76" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dal/ListeTachesGateway.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="75" column="66" lean-forward="false" selection-start-line="75" selection-start-column="66" selection-end-line="75" selection-end-column="66" />
+          <folding>
+            <marker date="1513759180643" expanded="true" signature="281:321" ph="SELECT * FRO... LISTETACHES" />
+            <marker date="1513759180643" expanded="true" signature="574:632" ph="SELECT * FRO... LISTETACHES" />
+            <marker date="1513759180643" expanded="true" signature="1480:1550" ph="INSERT INTO LISTETACHES... " />
+            <marker date="1513759180643" expanded="true" signature="1924:1966" ph="SELECT LAST_... ListeTaches" />
+            <marker date="1513759180643" expanded="true" signature="2192:2241" ph="SELECT id FR... ListeTaches" />
+            <marker date="1513759180643" expanded="true" signature="2553:2591" ph="DELETE FROM Tache... " />
+            <marker date="1513759180643" expanded="true" signature="2688:2724" ph="DELETE FROM ListeTaches... " />
+            <marker date="1513759180643" expanded="true" signature="3053:3085" ph="SELECT * fro... Tache" />
+            <marker date="1513759180643" expanded="true" signature="3053:3105" ph="SELECT * FRO... ListeTaches" />
+            <marker date="1513759180643" expanded="true" signature="3066:3085" ph="DELETE FROM Tache... " />
+            <marker date="1513759180643" expanded="true" signature="3344:3383" ph="SELECT * FRO... ListeTaches" />
+            <marker date="1513759180643" expanded="true" signature="3610:3641" ph="SELECT MAX(i... ListeTaches" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controler/ControllerVisiteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="148" column="29" lean-forward="false" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="29" />
+          <folding>
+            <marker date="1513760457211" expanded="true" signature="4106:4242" ph="..." />
+            <marker date="1513760457211" expanded="true" signature="4127:4242" ph="..." />
+            <marker date="1513760457211" expanded="true" signature="6490:6537" ph="..." />
           </folding>
         </state>
       </provider>
