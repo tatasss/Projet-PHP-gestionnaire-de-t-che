@@ -34,8 +34,13 @@ class FrontController
 
     if(!isset(Config::$connecte))Config::$connecte=0;
         //$this->getValue($modeleList,$modeleTache);
+        session_start();
+        //echo session_status();
+
     $_SESSION['connecte']=Config::$connecte;
-//debut
+    echo $_SESSION['connecte'];
+
+    //debut
 
 //on initialise un tableau d'erreur
         $dVueEreur = array ();
@@ -67,6 +72,7 @@ class FrontController
                     new ControllerVisiteur($action);
                     break;
                 case "verifCo":new ControllerUser($action);
+                    //=$_SESSION['connecte'];
                     break;
 
                 case "SupprimerTache":

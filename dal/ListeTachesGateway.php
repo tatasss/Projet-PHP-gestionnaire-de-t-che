@@ -55,11 +55,15 @@ class ListeTachesGateway
                 ':description'=>array($liste->getDescription(),PDO::PARAM_STR)));
     }
     public function getLastId() : int {
-         $this->con->executeQuery('SELECT LAST_INSERT_ID(id) FROM ListeTaches;',array());
-        $results=$this->con->getResults();
-        foreach ($results as $row)
-            $id_list = $row[0];
-        return $id_list;
+        try {
+            $this->con->executeQuery('SELECT LAST_INSERT_ID(id) FROM ListeTaches;', array());
+            $results = $this->con->getResults();
+            foreach ($results as $row)
+                $id_list = $row[0];
+            return $id_list;
+        }catch (Exception $e){
+            return 0;
+        }
     }
     public function  getId($nom):int{
         $this->con->executeQuery('SELECT id FROM ListeTaches WHERE nom_liste=:liste',array(':liste'=>array($nom,PDO::PARAM_STR)));

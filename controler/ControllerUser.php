@@ -19,34 +19,35 @@ try{
 
 
 switch($action) {
-case "connection":
-$this->chercherFormulaireCo($dVueErreur);
-break;
-case "verifCo":
-$_SESSION['connecte']=1;
+    case "connection":
+        $this->chercherFormulaireCo($dVueErreur);
+        break;
+    case "verifCo":
+        $_SESSION['connecte']=1;
 
 // require(config::$vue['connection']);
-try {
-$notreUsegt = $this->valideForm($notreUsegt);
-$_SESSION['connecte'] = 1;
-$_REQUEST['action']=null;
+        try {
+        $notreUsegt = $this->valideForm($notreUsegt);
 
-} catch (Exception $e) {
-$_SESSION['connecte'] = 0;
-}
-if ($_SESSION['connecte'] == 0) {
-require config::$vue['connection'];
-echo " <div class='row'><div class='col-sm-4'></div>
-    <div class='col-sm-4'>Veuillez Reessayer votre connection</div>
-    <div class='col-sm-4'></div>";
 
-    } else {
-    $_SESSION['utilisateur'] = $notreUsegt;
-    $_SESSION['nom'] = $notreUsegt->getNom();
-    require config::$vue['index'];
+        } catch (Exception $e) {
 
-    }
-    Config::$connecte=$_SESSION['connecte'];
+            $_SESSION['connecte'] = 0;
+        }
+
+        if ($_SESSION['connecte'] == 0) {
+    require config::$vue['connection'];
+    echo " <div class='row'><div class='col-sm-4'></div>  
+            <div class='col-sm-4'>Veuillez Reessayer votre connection</div>
+        <div class='col-sm-4'></div>";
+
+        } else {
+        $_SESSION['utilisateur'] = $notreUsegt;
+        $_SESSION['nom'] = $notreUsegt->getNom();
+        require config::$vue['index'];
+
+        }
+        Config::$connecte=$_SESSION['connecte'];
     break;
 
     case "privee":
@@ -122,7 +123,8 @@ echo " <div class='row'><div class='col-sm-4'></div>
     try {
     $model->insererTachePrivee(new Tache(1, $nom, null, null, $description, $IdList, 'lampda'));
     }catch (Exception $e){
-    echo $e->getMessage();
+        require(Config::$vue['mesTaches']);
+        print("pas de liste selectionné");
     }
     require(Config::$vue['mesTaches']);
     //   $this->afficherTachePublic($dVueErreur);
@@ -247,7 +249,8 @@ $mdp=Validation::nettoyerString($mdp);
 );*/
 
 $notreUsegt->findUser($nom, $mdp);
-
+    $_SESSION['connecte'] = 1;
+    echo $_SESSION['connecte'];
 
 return $notreUsegt;
 }
@@ -276,6 +279,7 @@ $liste =$_POST['ok'];
 $liste=Validation::nettoyerString($liste);
 try{
 $modeList->supprimerListe($liste);
+require (Config::vue['privee']);
 }
 catch(Exception $e){
 echo $e->getMessage();

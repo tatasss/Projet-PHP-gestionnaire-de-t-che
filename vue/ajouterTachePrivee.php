@@ -17,8 +17,8 @@
             <a class="navbar-brand" href="#">Gestionnaire de site</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php?action=index">taches public</a></li>
-            <li ><a href="index.php?action=privee">mes taches</a></li>
+            <li ><a href="index.php?action=index">taches public</a></li>
+            <li class="active"><a href="index.php?action=privee">mes taches</a></li>
             <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.php">Tache Publique<span class="caret"></span></a>
               <ul class="dropdown-menu">
              <li><a href="vue/AjouetrTachePu.php">Ajouter tache publique</a></li>
