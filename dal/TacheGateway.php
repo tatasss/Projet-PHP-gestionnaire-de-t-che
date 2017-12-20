@@ -33,14 +33,16 @@ class TacheGateway
     }
     public function getLastId() : int {
         try {
-            $this->con->executeQuery('SELECT MAX(id) FROM Tache;', array());
+            $this->con->executeQuery('SELECT LAST_INSERT_ID(id) AS IDS FROM Tache;', array());
             $results = $this->con->getResults();
+            if ($results==null)throw new Exception('id manquant');
             foreach ($results as $row)
                 $id = $row[0];
             return $id;
-        }catch (Excepetion $e){
+        }catch (Exception $e){
             return 0;
         }
+        //return 0;
     }
     public function insererTache(Tache $laTache,$id){
         $this->con->executeQuery('INSERT INTO Tache(id,nom_tache,date_debut,date_fin,description_tache,id_liste) VALUES (:id,:nom,:date_debut,:date_fin,:description,:idListe)',

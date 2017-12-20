@@ -56,7 +56,7 @@ class ListeTachesGateway
     }
     public function getLastId() : int {
         try {
-            $this->con->executeQuery('SELECT LAST_INSERT_ID(id) FROM ListeTaches;', array());
+            $this->con->executeQuery('SELECT id FROM ListeTaches;', array());
             $results = $this->con->getResults();
             foreach ($results as $row)
                 $id_list = $row[0];
@@ -65,8 +65,23 @@ class ListeTachesGateway
             return 0;
         }
     }
+    public function getFirstId($PROP):int{
+        $this->con->executeQuery('SELECT id FROM ListeTaches WHERE proprietaire=:prop',array(':prop'=>array($PROP,PDO::PARAM_STR)));
+        $results=$this->con->getResults();
+        if($results==null)throw new Exception('pas de tache');
+        foreach ($results as $row)
+            return $row[0];
+
+    }
+    public function getFirstIdPu():int{
+        $this->con->executeQuery('SELECT id FROM ListeTaches WHERE is_public=1',array());
+        $results=$this->con->getResults();
+        foreach ($results as $row)
+            return $row[0];
+
+    }
     public function  getId($nom):int{
-        $this->con->executeQuery('SELECT id FROM ListeTaches WHERE nom_liste=:liste',array(':liste'=>array($nom,PDO::PARAM_STR)));
+            $this->con->executeQuery('SELECT id FROM ListeTaches WHERE nom_liste=:liste',array(':liste'=>array($nom,PDO::PARAM_STR)));
         $results=$this->con->getResults();
         foreach ($results as $row)
             $id_list = $row[0];

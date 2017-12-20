@@ -158,28 +158,31 @@ class ControllerVisiteur
 
     }
     static function getValue(ModeleTache $modeTache){
+        try {
 
 
-        if(isset($_POST['idList']))$mavar=$_POST['idList'];
-        else $mavar=1;
-        // (int) $liste=$modeleList->getListeById($_POST['idList']);
-        // foreach ($liste as $row) {
-        $tab = $modeTache->tachesDeListe($mavar);
-        //    echo($row->getNomTache());
-        foreach ($tab as $row){
-            print('<div class="panel panel-default">');
-            print('<div class="panel-heading">');
-            print('<div class="row"><div class="col-sm-8">');
-            print $row->getNomTache();
-            $nom=$row->getNomTache();
-            print("</div><div class='col-sm-2'></div><div class='col-sm-2'><form method='post' action='index.php?action=SupprimerTache'><button type='submit' id='$nom' name='ok' value='$nom' class='btn btn-danger'>Supprimer</button></form></div> </div>");
-            /*print('</div><div class="col-sm-2"></div><div class="col-sm-2"><form method="post" action="index.php?action=SupprimerTache"><button type="submit" name="ok" value="<?= $row->getId()?>"class="btn btn-danger">Supprimer</button></form></div> </div>');*/
-            print ('</div>');
-            print('<div class="panel-body">');
-            print $row->getDescriptionTache();
-            print('</div>');
-            print('</div>');
-        }
+            $un = new ModeleListeTaches();
+            if (isset($_POST['idList'])) $mavar = $_POST['idList'];
+            else $mavar = $un->getFirstIdPublic();
+            // (int) $liste=$modeleList->getListeById($_POST['idList']);
+            // foreach ($liste as $row) {
+            $tab = $modeTache->tachesDeListe($mavar);
+            //    echo($row->getNomTache());
+            foreach ($tab as $row) {
+                print('<div class="panel panel-default">');
+                print('<div class="panel-heading">');
+                print('<div class="row"><div class="col-sm-8">');
+                print $row->getNomTache();
+                $nom = $row->getNomTache();
+                print("</div><div class='col-sm-2'></div><div class='col-sm-2'><form method='post' action='index.php?action=SupprimerTache'><button type='submit' id='$nom' name='ok' value='$nom' class='btn btn-danger'>Supprimer</button></form></div> </div>");
+                /*print('</div><div class="col-sm-2"></div><div class="col-sm-2"><form method="post" action="index.php?action=SupprimerTache"><button type="submit" name="ok" value="<?= $row->getId()?>"class="btn btn-danger">Supprimer</button></form></div> </div>');*/
+                print ('</div>');
+                print('<div class="panel-body">');
+                print $row->getDescriptionTache();
+                print('</div>');
+                print('</div>');
+            }
+        }catch (Exception $e){}
 
     }
     static function selectListPu(){

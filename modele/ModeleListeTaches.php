@@ -58,6 +58,13 @@ class ModeleListeTaches
         $this->liste_gateway->insererListeTachePrivee(new ListeTaches($thisId,$nom,$pub,$proprio,$description));
 
     }
+    public function getFirstId($PROP):int{
+        return $this->liste_gateway->getFirstId($PROP);
+    }
+    public function getFirstIdPublic():int{
+        return $this->liste_gateway->getFirstIdPu();
+    }
+
     public function creerListeTache($nom,$pub,$proprio,$description){
         //echo $this->liste_gateway->getLastId();
         $thisId=$this->liste_gateway->getLastId() +1;

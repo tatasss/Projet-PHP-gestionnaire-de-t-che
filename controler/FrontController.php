@@ -32,13 +32,13 @@ class FrontController
     $notreUsegt=new ModeleUtilisateur();
     $modeleTache=new ModeleTache();
 
-    if(!isset(Config::$connecte))Config::$connecte=0;
+    //if(!isset(Config::$connecte))Config::$connecte=0;
         //$this->getValue($modeleList,$modeleTache);
         session_start();
         //echo session_status();
 
     $_SESSION['connecte']=Config::$connecte;
-    echo $_SESSION['connecte'];
+    //echo $_SESSION['connecte'];
 
     //debut
 
