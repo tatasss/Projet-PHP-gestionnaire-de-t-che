@@ -47,6 +47,17 @@ class TacheGateway
             'description'=>array($laTache->getDescriptionTache(),PDO::PARAM_STR),
             'idListe'=>array($laTache->getListeId(),PDO::PARAM_INT)));
     }
+    public function insererTachePrivee(Tache $laTache,$id)
+    {
+        $this->con->executeQuery('INSERT INTO Tache VALUES (:id,:nom,:date_debut,:date_fin,:description,:idListe,:proprietaire)',
+            array(':id' => array($id, PDO::PARAM_INT),
+                ':nom' => array($laTache->getNomTache(), PDO::PARAM_STR),
+                ':date_debut' => array($laTache->getDateDebut(), PDO::PARAM_STR),
+                ':date_fin' => array($laTache->getDateFin(), PDO::PARAM_STR),
+                'description' => array($laTache->getDescriptionTache(), PDO::PARAM_STR),
+                'idListe' => array($laTache->getListeId(), PDO::PARAM_INT),
+                'proprietaire' => array($laTache->getProprietaire(), PDO::PARAM_STR)));
+    }
 
     public function modifierTache(Tache $laTache){
         $this->con->executeQuery('UPDATE Tache SET nom = :nom, date_debut =:date_debut, date_fin =:date_fin,description=:description,

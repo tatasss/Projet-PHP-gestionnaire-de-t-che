@@ -76,7 +76,15 @@ class ListeTachesGateway
         $this->con->executeQuery('DELETE FROM ListeTaches WHERE id=:id',
             array(':id'=>array($idListe,PDO::PARAM_INT)));
     }
-
+    public function insererListeTachePrivee(ListeTaches $liste){
+        $this->con->executeQuery('INSERT INTO ListeTaches VALUES (:id,:nom,:is_public,:proprietaire,:description)',
+            array(':id'=>array($liste->getId(),PDO::PARAM_INT),
+                ':nom'=>array($liste->getNomListe(),PDO::PARAM_STR),
+                ':is_public'=>array($liste->getisPublic(),PDO::PARAM_INT),
+                ':proprietaire'=>array($liste->getProprietaire(),PDO::PARAM_STR),
+                ':description'=>array($liste->getDescription(),PDO::PARAM_STR)
+            ));
+    }
     public function tachesDeListe (ListeTaches $liste){
         $modele_tache=new ModeleTache($this->con);
         $tab=$modele_tache->tachesDeListe($liste);

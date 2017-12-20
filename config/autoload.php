@@ -10,7 +10,7 @@ class Autoload
 		if(null!=self::$_instance){
 			throw new RuntimeException(sprintf('%s is already started',__CLASS__));}
 		self::$_instance = new self();
-		if(!spl_autoload_register(array(self::$_instance,'autoload'),false)){
+		if(!spl_autoload_register(array(self::$_instance,'_autoload'),false)){
 			throw new RuntimeException(sprintf('%s : Could not start the autload',__CLASS__));}
 	}
 	private static function _autoload($class){

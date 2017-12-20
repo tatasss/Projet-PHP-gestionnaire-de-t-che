@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Gestionnaire de site</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/monCss.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Gestionnaire de site</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/monCss.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -44,36 +44,37 @@
         </ul>
     </div>
 </nav>
-  
-<div class="container">
- <div class="row">
-	<div class="col-sm-8">
-        <div class="row">
-            <div class="col-sm-8"><h3>Tâche</h3></div>
-            <div class="col-sm-4">
-                <h3> <form method="post" action="index.php?action=ajouterTache"><button type="submit" name="ok" value="ok" class="btn btn-success">ajouter</button></form></h3>
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="row">
+                <div class="col-sm-8"><h3>Tâche</h3></div>
+                <div class="col-sm-4">
+                    <h3> <form method="post" action="index.php?action=ajouterTachePrivee"><button type="submit" name="ok" value="ok" class="btn btn-success">ajouter</button></form></h3>
+
+                </div>
+            </div>
+            <?php ControllerUser::getValue(new ModeleTache())?>
+        </div>
+        <div class="col-sm-4" >
+            <div class="panel panel-default">
+                <div class="panel-heading"><div class="row">
+                        <div class="col-sm-8"> Liste de tâches  </div>
+                        <div class="col-sm-4"> <form method="post" name="formAjoutListe" action="index.php?action=ajouterListeTachePrivee"> <button type="submit" name="ok" value="ok" class="btn btn-success">ajouter</button></form></div></div>
+                </div>
+                <div class="panel-body">
+                    <ul>
+
+                        <?php ControllerUser::affichlistePr(new ModeleListeTaches())?>
+                    </ul>
+                </div>
             </div>
         </div>
-        <?php ControllerVisiteur::getValue(new ModeleTache())?>
-	</div>
-	<div class="col-sm-4" >
-	<div class="panel panel-default">
-      		<div class="panel-heading"><div class="row">
-                    <div class="col-sm-8"> Liste de tâches  </div>
-                    <div class="col-sm-4"> <form method="post" name="formAjoutListe" action="index.php?action=ajouterListeTache"> <button type="submit" name="ok" value="ok" class="btn btn-success">ajouter</button></form></div></div>
-            </div>
-                <div class="panel-body">
-                <ul>
-
-                <?php ControllerVisiteur::affichlistePu(new ModeleListeTaches(),new ModeleTache())?>
-                </ul>
-            </div>
-    	</div>
-	</div>
-</div> 
+    </div>
 
 </div>
 
 </body>
 </html>
+

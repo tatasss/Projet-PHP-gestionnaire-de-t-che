@@ -13,7 +13,10 @@ class Config{
                       'ajoutListeTache'=>'vue/ajouterListeTache.php',
                       'base'=>'index.php',
                       'connection'=>'vue/connection.php',
-                      'ajoutache'=>'vue/ajoutTache.php');
+                      'ajoutache'=>'vue/ajoutTache.php',
+                      'mesTaches'=>'vue/mesTaches.php',
+                      'ajouterTachePrivee'=>'vue/ajouterTachePrivee.php',
+                      'ajouterListeTachePrivee'=>'vue/ajouterListeTachePrivee.php');
     static $tab=[];
     static $id_list = 0;
 }

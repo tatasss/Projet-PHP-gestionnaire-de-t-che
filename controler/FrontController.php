@@ -75,6 +75,30 @@ class FrontController
                 case "SupprimerListe":
                     new ControllerVisiteur($action);
                     break;
+                case 'privee':
+                    new ControllerUser($action);
+                    break;
+                case "ajouterListeTachePrivee":
+                    new ControllerUser($action);
+                    break;
+                case "verifListePrivee":
+                    new ControllerUser($action);
+                    break;
+
+                case "ajouterTachePrivee":
+                    new ControllerUser($action);
+                    break;
+                case "verifTachePrivee":
+                    new ControllerUser($action);
+                    break;
+
+
+                case "SupprimerTachePrivee":
+                    new ControllerUser($action);
+                    break;
+                case "SupprimerListePrivee":
+                    new ControllerUser($action);
+                    break;
                 default:
                     $dVueEreur[] =	"Erreur d'appel php";
                     require (config::$vue['index']);
